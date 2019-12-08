@@ -1,763 +1,1362 @@
 
 <!DOCTYPE html>
-<html>
-<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#'>
-<meta charset='utf-8'>
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c04af4d751","applicationID":"15684236","transactionName":"JwwLTUENWQ1WRx9HUwURBlFWERoPVkI=","queueTime":0,"applicationTime":854,"agent":""}</script>
-<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"c04af4d751",applicationID:"15684236"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
-<meta content='100008790183428' property='fb:admins'>
-<meta content='Interpreters Travel' property='og:site_name'>
-<meta content='Interpreters Travel' property='og:title'>
-<meta content='&lt;div class=&#39;mobile-hide&#39;&gt;Устные переводчики. По всему миру&lt;/div&gt;
- | Interpreters Travel' property='og:description'>
-<link href='https://www.interpreters.travel/ru.amp' rel='amphtml'>
+<html class="no-js" lang="ru" prefix="og: http://ogp.me/ns#">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <!--//<meta charset="utf-8"/>//-->
+  <title>Google-переводчик что-то знает: Сервис начал говорить предсказаниями</title>
+  <meta name="description" content="Пользователи заметили, что переводчик Google может выдавать странные выражения, похожие на предсказания или пророчества."/>
 
-<link href='https://www.interpreters.travel/en/' hreflang='en' rel='alternate'>
-<link href='https://www.interpreters.travel/ru/' hreflang='ru' rel='alternate'>
-<link href='https://www.interpreters.travel/de/' hreflang='de' rel='alternate'>
-<link href='https://www.interpreters.travel/en/' hreflang='x-default' rel='alternate'>
-<meta content='width=device-width, initial-scale=1.0' name='viewport'>
-<meta content='xKAjRicGHfjBlUQw28eS0fKTkagME4WEXDzTabSrwpU' name='google-site-verification'>
-<title>Interpreters Travel</title>
-<link href='/favicon.ico' rel='icon' type='image/x-icon'>
-<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
-<meta content='Устные переводчики. По всему миру. Почему interpreters.travel? Проверенные переводчики и реальные отзывы клиентов
-' name='description'>
-<link async="async" data-turbolinks-track="true" href="https://assets.interpreters.travel/assets/application-14a92db3463db399cdc7a86f84ff4c79.css" media="all" rel="stylesheet" />
-<script data-turbolinks-track="true" src="https://assets.interpreters.travel/assets/application-9ea5a658addf6a158b5f0d68fb301c39.js"></script>
-<meta content="authenticity_token" name="csrf-param" />
-<meta content="/AQv43cPvcXOmkcIIcUtCkzEhqVylBafevpa2tc5D1g=" name="csrf-token" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '880184659014223');
-fbq('track', 'PageView');
+  <meta property="og:site_name" content="Телеканал Царьград"/>
+  <meta property="og:locale" content="ru_RU"/>
+
+  <!-- Place favicon.ico in the root directory -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;subset=cyrillic" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&amp;subset=cyrillic" rel="stylesheet"/>
+  <link rel="stylesheet" href="/fonts/fonts.css"/>
+  <link rel="stylesheet" href="/css/main.css?v57"/>
+<script src="https://yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
+<link href="/favicon.ico?v3" rel="icon" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png?v3"/>
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png?v3"/>
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png?v3"/>
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png?v3"/>
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png?v3"/>
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png?v3"/>
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png?v3"/>
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png?v3"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png?v3"/>
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v3" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png?v3" sizes="192x192"/>
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png?v3" sizes="16x16"/>
+<link rel="manifest" href="/favicons/manifest_.json"/>
+
+<link rel="stylesheet" href="/flowplayer/skin.css?v2"/>
+<link rel="stylesheet" href="/flowplayer/flowplayer.quality-selector.css"/>
+
+
+<meta name="keywords" content="Google, переводчик, странные выражения, пророчества при переводе с редких языков">
+<link rel="amphtml" href="https://amp.tsargrad.tv/news/google-perevodchik-chto-to-znaet-servis-nachal-govorit-predskazanijami_148409">
+<meta property="og:url" content="https://tsargrad.tv/news/google-perevodchik-chto-to-znaet-servis-nachal-govorit-predskazanijami_148409"/>
+<meta property="og:title" content="Google-переводчик что-то знает: Сервис начал говорить предсказаниями"/>
+				<meta property="og:type" content="article"/>
+
+<meta property="og:description" content="Пользователи заметили, что переводчик Google может выдавать странные выражения, похожие на предсказания или пророчества."/>
+
+<meta property="og:image" content="https://img.tsargrad.tv/cache/5/c/24152_jpg.jpeg/w1056h594fill.jpeg"/>
+<meta property="og:image:width" content="1056"/>
+<meta property="og:image:height" content="594"/>
+<meta property="article:published_time" content="2018-07-23T20:41+03:00"/>
+<meta property="article:modified_time" content="2018-07-23T21:26+03:00"/>
+				
+				<meta name="mediator" content="148409"/>
+<meta name="mediator_author" content="Роман Овчинников"/>
+<meta name="mediator_theme" content="Новые технологии"/>
+<meta name="mediator_published_time" content="2018-07-23T20:41+03:00"/>
+				
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tsargradtv" />
+<meta name="twitter:title" content="Google-переводчик что-то знает: Сервис начал говорить предсказаниями" />
+<meta name="twitter:description" content="Подробнее на сайте" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "name": "Google-переводчик что-то знает: Сервис начал говорить предсказаниями",
+  "headline": "Google-переводчик что-то знает: Сервис начал говорить предсказаниями",
+  "url": "https://tsargrad.tv/news/google-perevodchik-chto-to-znaet-servis-nachal-govorit-predskazanijami_148409",
+  "image": {
+  "@type": "ImageObject",
+  "representativeOfPage": "true",
+  "url": "https://img.tsargrad.tv/cache/5/c/24152_jpg.jpeg/w1056h594fill.jpeg",
+  "height": 1056,
+  "width": 594
+  },
+  "dateCreated": "2018-07-23T20:41:00+03:00",
+  "datePublished": "2018-07-23T20:41:00+03:00",
+  "dateModified": "2018-07-23T20:41:00+03:00",
+  "description": "Пользователи заметили, что переводчик Google может выдавать странные выражения, похожие на предсказания или пророчества.",
+  "author": {
+  "@type": "Organization",
+   "name": "tsargrad.tv"
+  },
+  "publisher": {
+  "@type": "Organization",
+  "name": "tsargrad.tv",
+  "logo": {
+      "@type": "ImageObject",
+      "url": "https://tsargrad.tv/img/logo_60px.png",
+      "width": 348,
+      "height": 60
+    }
+  },
+  "mainEntityOfPage": "https://tsargrad.tv/news/google-perevodchik-chto-to-znaet-servis-nachal-govorit-predskazanijami_148409"
+}
 </script>
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MKXTKHB');
-</script>
-<noscript>
-<img height='1' src='https://www.facebook.com/tr?id=880184659014223&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
-</noscript>
+
+  <script src="/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="/js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="/firebase.js"></script>
+  <script src="/app_void.js"></script>
+
 </head>
-<body class='searches new  locale-ru'>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+    
 <noscript>
-<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-MKXTKHB' style='display:none;visibility:hidden' width='0'></iframe>
+  <img src="//counter.rambler.ru/top100.cnt?pid=4479361" alt="Топ-100" />
 </noscript>
-<div id='site'>
-<script>
-  (function() {
-    I18n.defaultLocale = "en";
-  
-    I18n.locale = "ru";
-  
-  }).call(this);
-</script>
-<!-- TOP -->
-<div id='top'>
-<div class='content'>
-<a class="mobile-show logo-white" href="/ru"><div class='mobile-show'><img alt="" src="https://assets.interpreters.travel/assets/white_logo-916cc181314b026d5121764a702fbd02.png" /></div>
-</a><div class='top-menu-trigger mobile-show'>Menu</div>
-<div class='mobile-hide'><ul class='top_menu'>
-<li class='account-link'>
-<a href="/ru/users/sign_in"><span class='user-icon'>Вход</span>
-</a></li>
-<li class='mobile-hide'><a href="https://cp.interpreters.travel">Вход для переводчиков</a></li>
-<li class='mobile-hide'><a href="/ru/phone">Звонки с переводчиками</a></li>
-<li class='support-link'><a href="/ru/help/support">Поддержка 24/7</a></li>
-<li class='mobile-show cabinet_sidebar_menu_calls'><a href="/ru/phone">Звонки с переводчиками</a></li>
-
-<li class='locales-link'>
-<a data-jq-dropdown=".locales-dropdown" href="#">Русский
-<b class='caret'></b>
-</a><div class='locales-dropdown jq-dropdown'>
-<ul class='jq-dropdown-menu'>
-<li><a href="/de/">Deutsch</a></li>
-<li><a href="/en/">English</a></li>
-<li><a href="/zh/">中文</a></li>
-<li><a href="/fr/">Français</a></li>
-<li><a href="/es/">Español</a></li>
-<li><a href="/it/">Italiano</a></li>
-<li><a href="/ar/">العربية</a></li>
-<li><a href="/ja/">日本語</a></li>
-</ul>
-</div>
-</li>
-</ul>
-<div class='clear'></div>
-</div>
-</div>
-</div>
-<!-- HEAD -->
-<div id='head'>
-<div class='content'>
-<a class="mobile-hide" href="/ru" itemprop="url"><img alt="" class="logo" itemprop="logo" src="https://assets.interpreters.travel/assets/logo-c2e780cc39a79c11362fb8c2250c064c.png" />
-<meta content='Interpreters Travel' itemprop='name'>
-</a>
-<div class='slogon_about'>
-<div class='mobile-hide'>Устные переводчики. По всему миру</div>
-
-</div>
-<div class='clear'></div>
-</div>
-</div>
-<!-- Body -->
-<div class='ru' id='body'>
-<div class='slider_wrapper'>
-<ul class='bxslider' id='main_slider'>
-<li>
-<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_1-44cce294bf2d9e5b82ed8d189e69866e.jpg" />
-<div class='content'>
-<div class='text slaid11'>
-Переводчик на деловой встрече
-<br>
-<span class='slaid12'>в Лос-Анджелесе, США - 3940 руб./3 часа</span>
-</div>
-</div>
-</li>
-<li>
-<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_3-fb8c506400e63025e5acec5459bb0814.jpg" />
-<div class='content'>
-<div class='text slaid21'>
-Переводчик на винной выставке
-<br>
-<span class='slaid22'>Барселона, Испания - 7350 руб./5 часов</span>
-</div>
-</div>
-</li>
-<li>
-<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_4-2c04f3449fc714dc8b26c53fd0fd6297.jpg" />
-<div class='content'>
-<div class='text slaid31'>
-Перевод шепотом на семинаре
-<br>
-<span class='slaid32'>в Гонконге - 6185 руб./2 дня</span>
-</div>
-</div>
-</li>
-<li>
-<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_2-afa177de8648fc07a0d133db131a2f6b.jpg" />
-<div class='content'>
-<div class='text slaid41'>
-Перевод на консультации в клинике
-<br>
-<span class='slaid42'>Кельна, Германия - 4202 руб./3 часа</span>
-</div>
-</div>
-</li>
-</ul>
-<div class='content'>
-<div class='find_translator_wrapper'>
-<div class='title'>
-Найти переводчиков
-</div>
-<div class='form_wrapper' id='search_form_wrapper'>
-<form accept-charset="UTF-8" action="/ru/searches" class="simple_form search" id="base_form_search" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="/AQv43cPvcXOmkcIIcUtCkzEhqVylBafevpa2tc5D1g=" /></div>
-<div class='label'>
-<span class='lab'>
-Где:
-</span>
-<span class='error'></span>
-
-<input class='find_translator_city' name='city_name' placeholder='например: Милан, Нью-Йорк, Гонконг' type='text'>
-<input class='hidden' id='search_city_id' name='search[city_id]' type='hidden' value=''>
-<script>
-  var API_BASE_URL = "https://cp.interpreters.travel/api"
-  $(document).on('ready page:load', function(e) {
-      $('.find_translator_city').val("").removeClass('act');
-      var cache = {};
-      function select(event, ui) {
-        $('.find_translator_city').disableInputFor(1000);
-        setTimeout(function() {$('.find_translator_city').val(ui.item.label)}, 500);
-        $('#search_city_id').val(ui.item.value);
-        // reconstruct lang selector
-        // Frontend redirects this request to backend API:
-        $.get("/ru/searches/language_selector",
-               {city_id: ui.item.value, your_language_id: $("#search_your_language_id").val()},
-               function(data) {
-                $('#language_selector').replaceWith(data)
-              }).done(function() {
-                  $(".jq-selectbox__select").addClass('act');
-                  $.get("/ru/searches/your_language_selector",
-                         {city_id: ui.item.value, language_id: $("#search_language_id").val(), your_language_id: $("#search_your_language_id").val()},
-                         function(data) {
-                          $('#your_language_selector').replaceWith(data)
-                        }).done(function() {
-                            $(".jq-selectbox__select").addClass('act');
-                        });
-              });
-        return false;
-      }
-      cityAjaxIsRunning = false
-      $('.find_translator_city').autocomplete({
-        minLength: 2,
-        delay: 0,
-        source: function(request, response){
-          if(cityAjaxIsRunning) {
-            return;
-          }
-          var term = request.term;
-          if (term in cache){
-            response(cache[term]);
-            return;
-          }
-          cityAjaxIsRunning = true;
-          $.ajax({
-                type: 'GET',
-                url: API_BASE_URL+'/cities?interpreters_search=true&locale=ru',
-                dataType: 'jsonp',
-                crossDomain: true,
-                data: request,
-                success:function(data){
-                  cache[ term ] = data;
-                  item = data[0]
-                  if(item && term.length >= 5) {
-                    console.log("SELECT!")
-                    select('select', {item: item});
-                  }
-                  else if(item) {
-                    // $('.find_translator_city').val(item.label);
-                    // $('#search_city_id').val(item.value);
-                  }
-                  else {
-                    alert('В указанном городе сейчас нет доступных переводчиков. Попробуйте найти переводчика в этом городе позже или выберите другой город');
-                    $('.find_translator_city').val(null);
-                    $('#search_city_id').val(null);
-                    $('#language_selector').html("<div id=\'language_selector\'>\n<select disabled=\"disabled\" id=\"search_language_id\" name=\"search[language_id]\"><option value=\"\">нет переводчиков для этого города<\/option><\/select>\n<script>\n  (function() {\n    $(document).ready(function(e) {\n      $(\"#language_selector select\").styler();\n      return $(\".jq-selectbox__select\").on(\'click\', function(e) {\n        if ($(\'input#search_city_id\').attr(\'value\') === \'\') {\n          return alert(\'Сначала укажите город\');\n        } else {\n          return $(this).addClass(\'act\');\n        }\n      });\n    });\n  \n  }).call(this);\n<\/script>\n<\/div>\n");
-                  }
-                  cityAjaxIsRunning = false
-                  response( data );
-                },
-                error:function(jq, st, error){
-                  alert(error);
-                }
-          });
-  
-        },
-        focus: function(event, ui){
-          $('.find_translator_city').val(ui.item.label);
-          return false;
-        },
-        select: select
-    });
-  });
-</script>
-
-</div>
-<div class='label'>
-<span class='lab'>
-Когда:
-</span>
-<span class='error'></span>
-
-<div class='data_wrapper'>
-<div class='full_date_text'>
-выберите дату, время
-</div>
-<div class='data_cloud'>
-<a class='close-me'>&#xd7;</a>
-<div class='datepicker'></div>
-<input class='datepicker_hidden' type='hidden'>
-<div id='intervals'></div>
-<div class='timepicker'>
-<div class='border-wrapper timepicker'>
-<div class='title'>
-Время встречи (местное):
-</div>
-<div class='from'>
-<span class='text date-text-left'>C</span>
-<div class='hour time'>
-<input class='h' type='text' value='10'>
-<div class='ar'>
-<a class='plus'>
-<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
-</a>
-<a class='minus'>
-<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
-</a>
-</div>
-</div>
-<span class='text text2'>:</span>
-<div class='minute time'>
-<input class='min' type='text' value='00'>
-<div class='ar'>
-<a class='plus'>
-<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
-</a>
-<a class='minus'>
-<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
-</a>
-</div>
-</div>
-<span class='text date-text-right'>C</span>
-<div class='clear'></div>
-</div>
-<div class='to'>
-<span class='text date-text-left'>До</span>
-<div class='hour time'>
-<input class='h' type='text' value='18'>
-<div class='ar'>
-<a class='plus'>
-<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
-</a>
-<a class='minus'>
-<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
-</a>
-</div>
-</div>
-<span class='text text2'>:</span>
-<div class='minute time'>
-<input class='min' type='text' value='00'>
-<div class='ar'>
-<a class='plus'>
-<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
-</a>
-<a class='minus'>
-<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
-</a>
-</div>
-</div>
-<span class='text date-text-right'>До</span>
-<div class='clear'></div>
-</div>
-<div class='buttons'>
-<a class='button' id='add_time'>добавить</a>
-<a class='button' id='clear_time'>очистить</a>
-</div>
-</div>
-<div class='buttons'>
-<a class='button large clear_intervals' data-input-text='выберите дату, время' data-total-text='Общее время интервалов'>
-очистить интервалы
-</a>
-</div>
-</div>
-<pre class='result'>Общее время интервалов</pre>
-<div class='clear'></div>
-<input class='result_hidden' type='hidden'>
-<div class='select_result_wrapper'>
-<a class='select_result'>выбрать</a>
-</div>
-<img alt="Find cloud arrow" class="find_cloud_arrow" src="https://assets.interpreters.travel/assets/find_cloud_arrow-461c6d0bd0ba9d3029499cb76af957fb.png" />
-</div>
-</div>
-
-</div>
-<div class='label'>
-<span class='lab'>
-Какой язык нужен:
-</span>
-<span class='error'></span>
-
-<div id='language_selector'>
-<select disabled="disabled" id="search_language_id" name="search[language_id]"><option value="">выбрать из списка</option></select>
-<script>
-  (function() {
-    $(document).ready(function(e) {
-      $("#language_selector select").styler();
-      return $(".jq-selectbox__select").on('click', function(e) {
-        if ($('input#search_city_id').attr('value') === '') {
-          return alert('Сначала укажите город');
-        } else {
-          return $(this).addClass('act');
-        }
-      });
-    });
-  
-  }).call(this);
-</script>
-</div>
-
-</div>
-<div class='your_lang'>
-Ваш язык:
-<div id='your_language_selector'>
-<span>русский</span>
-<input class='hidden' id='search_your_language_id' name='search[your_language_id]' type='hidden' value='2'>
-<script>
-  (function() {
-    $(document).ready(function(e) {
-      $("#your_language_selector select").styler();
-      $(".jq-selectbox__select").on('click', function(e) {
-        if ($('input#search_city_id').attr('value') !== '') {
-          return $(this).addClass('act');
-        }
-      });
-      return $("#search_your_language_id").on("change", function() {
-        return $.get("/ru/searches/language_selector", {
-          city_id: $("#search_city_id").val(),
-          your_language_id: $("#search_your_language_id").val()
-        }, function(data) {
-          return $('#language_selector').replaceWith(data);
-        }).done(function() {
-          return $(".jq-selectbox__select").addClass('act');
-        }, $(".jq-selectbox__select").addClass('act'));
-      });
-    });
-  
-  }).call(this);
-</script>
-</div>
-
-</div>
-<input class="sub_bot" name="commit" type="submit" value="искать" />
-</form>
-</div>
-<div class='clear'></div>
-</div>
-
-</div>
-<div class='slider_arrows'>
-<a class='prev_arrow'></a>
-<a class='next_arrow'></a>
-</div>
-</div>
-<div class='main_content'>
-<div class='clear'></div>
-<div class='type_trans_wrapper'>
-<h2>Виды услуг устного перевода</h2>
-<div class='text'>Не знаете, какую услугу выбрать? Посмотрите описание услуг устного перевода.</div>
-<div class='type_trans'>
-<a class="type_trans_block" href="/ru/help/services/conversation"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_01-104735214396fa5757f230dad8b85dbd.png" />
-<span class='link'>Перевод на переговорах</span>
-</a><a class="type_trans_block" href="/ru/help/services/presentation"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_02-fbb2cae2cd3bbf6ab15f791a10aa7647.png" />
-<span class='link'>Перевод на презентации</span>
-</a><a class="type_trans_block no_mrg" href="/ru/help/services/protocol_translation"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_03-4c426cbfbd0cad0e51e2c70729515b10.png" />
-<span class='link'>Протокольный перевод</span>
-</a><a class="type_trans_block" href="/ru/help/services/exhibition"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_04-082b00c7bab9a088827f738d58e44874.png" />
-<span class='link'>Перевод на выставке</span>
-</a><a class="type_trans_block" href="/ru/help/services/seminar_conference"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_05-36800c1c8785a3aebb30800cea46e36a.png" />
-<span class='link'>Перевод на семинаре или конференции</span>
-</a><a class="type_trans_block no_mrg" href="/ru/help/services/escort_delegations"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_06-53421460fd5066696b46be7d5bb14163.png" />
-<span class='link'>Сопровождение делегаций</span>
-</a><div class='clear'></div>
-</div>
-<a class="all_link" href="/ru/help/services/conversation">Все услуги устного перевода</a>
-<div class='clear'></div>
-</div>
-<div class='why_inter_wrapper'>
-<h2>Почему interpreters.travel?</h2>
-<div class='why_inter'>
-<div class='why_inter_block'>
-<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_01-eb9772a4fc5ffb25d6386447d5588dcb.png" />
-<a class="name" href="/ru/help/for_clients">Просто и безопасно</a>
-<div class='text'>
-Заказывайте сейчас, платите потом! <br/> БЕСПЛАТНАЯ отмена заказа. <br/> Гарантия безопасности платежей.
-</div>
-</div>
-<div class='why_inter_block no_mrg'>
-<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_02-65edc5432859c839f98b7392023a3bfd.png" />
-<a class="name" href="/ru/help/for_clients">Низкие цены</a>
-<div class='text'>
-Все заказы ПО ЦЕНАМ ПЕРЕВОДЧИКОВ <br/> без агентских наценок. <br/> УЧЕТ СКИДОК в расчете заказа.
-</div>
-</div>
-<div class='why_inter_block'>
-<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_03-2012476a445ecf5f5560bb40412feba5.png" />
-<a class="name" href="/ru/help/for_clients">Максимум выбора</a>
-<div class='text'>
-Переводчики в 4242 городах, <br/> 172 странах по всему миру
-</div>
-</div>
-<div class='why_inter_block no_mrg'>
-<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_04-46fbc3dc356592e8df176001a0335577.png" />
-<a class="name" href="/ru/help/for_clients">Удобно</a>
-<div class='text'>
-Удобная оплата: VISA, MasterCard,<br/> банковский перевод, наличные на встрече<br/>ПОДДЕРЖКА 24/7 на русском языке
-</div>
-</div>
-<div class='clear'></div>
-</div>
-</div>
-<p style='color: #696a6e; font: 25px/25px &#39;robotolight&#39;'>Проверенные переводчики и реальные отзывы клиентов</p>
-<div class='client_reviews_slider_wrapper' style='position: relative;'>
-<ul class='bxslider' id='client-reviews-slider' style='padding: 0; margin-top: 5px;'>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;на высшом уровне&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Александр, Украина (8 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Отличная работа и самые приятные впечатления. Высокий профессиональный уровень, эрудиция. Спасибо огромное!&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Олег, &quot;VessVell&quot;, Германия (7 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Профессиональный подход, пунктуальность. Перевод деловой встречи прошел на высоком уровне! &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Кирилл Сибиряков, Украина (7 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Отлично&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Владимир Слепкань, Украина (8 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Спасибо Анастасии. &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Константин, Прага, Чехия (5 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Отличный переводчик и отличный человек. Спасибо большое за сопровождение на выставке и при личных поездках по Тегерану.  &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Евгений, Москва, Россия (3 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Отличная работа, большое спасибо!&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Nataliia Korpuseva, &quot;New Line Group&quot;, Prague, Czech Republic (December 4, 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Работали с Анной на выставке в Корее, все прошло отлично, очень ей благодарны.&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Алина Спиридонова, Воронеж, Россия (17 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Людмила профессионал в своём деле, делает быстрый и четкий перевод. Очень ответственно и профессионально подходит к делу. Такого быстрого перевода нам ещё не кто не делал. Цены доступные для любого закащика. Людмила нам очень помогла и мы ей от всех души блогодарны за Ее чёткий и професеональный подход к Клиенту и к своему делу! Спасибо вам огромное за помощь. &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Наташа, Киль, Германия (3 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Высокий профессионализм &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Ергали, Караганда, Казахстан (1 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Спасибо за работу, коммуникативные качества, профессионализм, пунктуальность, позволили результативно провести  намеченную  встречу. &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Ирина Иовская, Германия (1 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Добрый день!
-Воспользовались услугами перевода у Акмарал в хирургической клинике и остались очень довольны!
-Пунктуальная, ответственная, в идеале владеет турецким, русским и английским языками. Скорость перевода на высочайшем уровне!
-Было очень приятно работать с настоящим профессионалом. Спасибо!
-&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Инна Яковлева, Россия (29 ноября 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Очень довольны работой! Рекомендуем!&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Светлана, Компания &quot;UNICLINICS&quot;, Великобритания (1 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Профессионал своего дела. Спасибо за работу&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Рафаэль, Кыргызстан (1 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Впечатления остались очень хорошие. Блестящий Профессиональный  синхронный перевод! Доброжелательный, ответственный, пунктуальный, интеллигентный человек. Спасибо , Лариса , за помощь, надеемся на будущее сотрудничество&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Алла Артюх, Украина (1 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Все хорошо. Спасибо &raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Екатерина, Компания «Юркас», Минск, Беларусь (29 ноября 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Молодец! Помогла нам в общении на выставке.&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Олег Банин, Компания &quot;Европартнер&quot;, Краснодар, Россия (1 декабря 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Блестящий специалист. Настоящий профессионал. Рекомендую всем!&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Руслан, Москва, Россия (29 ноября 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Евгения — блестящий профессионал. Крайне рекомендуем сотрудничество&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Евгений, Россия (29 ноября 2019)</span>
-</li>
-<li>
-<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
-<div class='content'>
-<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
-&laquo;Впечатления от качества перевода, коммуникации в трехстороннем взаимодействии и общения в целом превзошли ожидания.&raquo;
-</div>
-</div>
-<div class='clear'></div>
-<br>
-<span style='color: #696a6e; float: right'>Сергей, Компания «АО «СПЕЦКАБЕЛЬ», Санкт-Петербург, Россия (25 ноября 2019)</span>
-</li>
-</ul>
-<div class='client-reviews-arrows'>
-<a class='prev_arrow' style='float: left;'></a>
-<a class='next_arrow' style='float: right;'></a>
-</div>
-</div>
-</div>
 
 
-</div>
-</div>
-<div id='footer'>
-<div class='content'>
-<ul class='footer_menu'>
-<li>
-<a href="/ru/help/info">Об interpreters.travel</a>
-</li>
-<li class='mobile-hide'>
-<a href="/ru/help/support">Поддержка 24/7</a>
-</li>
-<li>
-<a href="/ru/help/help_interpreter">Переводчикам</a>
-</li>
-<li><a href="/ru/help/for_affiliates">Партнерам</a></li>
-<li>
-<a href="/ru/help/terms_conditions">Правила и условия</a>
-</li>
-<li>
-<a href="/ru/help/privacy_policy">Политика конфиденциальности</a>
-</li>
-</ul>
-<div class='copy'>
-<span class='mobile-copy'>&copy; Copyright 2013 - 2019. interpreters.travel. All rights reserved.</span>
-<a class="social-link" href="https://www.facebook.com/interpreters.travel/" target="_blank"><i class='icon-facebook-official icon-social'></i>
-</a><a class="social-link" href="https://www.linkedin.com/company/interpreters-travel/" target="_blank"><i class='icon-linkedin-squared icon-social'></i>
-</a><a class="social-link" href="https://www.youtube.com/channel/UCHdC6jw6SHFbuRXhOjSpLDw" target="_blank"><i class='icon-youtube-play icon-social'></i>
-</a></div>
-</div>
-</div>
+
+
 <!-- Yandex.Metrika counter -->
-<script>
-  window.localStorage.setItem("locale", 'ru')
-  
-  var current_user_id = null;
-  
-  if (current_user_id) {
-    window.localStorage.setItem("current_user_id", current_user_id);
-  } else {
-    window.localStorage.removeItem("current_user_id");
-  }
-  
-  (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22175668 = new Ya.Metrika({id:22175668, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(27738642, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+	window.yaParams = { "author": "Роман Овчинников" };
+	ym(27738642, 'params', window.yaParams||{});
 </script>
-</body>
+<noscript><div><img src="https://mc.yandex.ru/watch/27738642" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54899543-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit;tsargradtv?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+
+";"+Math.random();</script><!--/LiveInternet-->
+
+
+
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2895057", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=2895057;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+	      <div class="header__top">
+        <div class="header__container">
+          <aside class="header__aside">
+            <div class="header__title">Первый русский</div>
+
+			
+			          </aside>
+
+          <div class="header__center">
+            <div class="header__logo">
+              <a href="/"><img src="/img/logo_1x.png" srcset="/img/logo_2x.png 2x, /img/logo_3x.png 3x" alt=""></a>
+            </div>
+
+
+            <time >8 декабря 2019, <span>Воскресенье</span></time>
+          </div>
+
+          <aside class="header__aside">
+            <div class="header__social">
+              <a href="https://www.youtube.com/tsargradtv" target="_blank" class="header__social-link">
+                <i class="icon-youtube-play"></i>
+              </a>
+              <a href="https://vk.com/tsargradtv" target="_blank" class="header__social-link">
+                <i class="icon-vk"></i>
+              </a>
+              <a href="https://www.facebook.com/tsargradtv" target="_blank" class="header__social-link">
+                <i class="icon-facebook"></i>
+              </a>
+              <span class="header__social-toggle js-social-toggle"></span>
+
+              <div class="header__social-drop">
+                <div class="header__social-drop-inner">
+                  <a href="https://www.instagram.com/tsargradtv" target="_blank" class="header__social-link">
+                    <i class="icon-instagram"></i>
+                  </a>
+                  <a href="http://www.ok.ru/tsargradtv" target="_blank" class="header__social-link">
+                    <i class="icon-odnoklassniki"></i>
+                  </a>
+                  <a href="https://twitter.com/tsargradtv" target="_blank" class="header__social-link">
+                    <i class="icon-twitter"></i>
+                  </a>
+                  <a href="https://ttttt.me/tsargradtv" target="_blank" class="header__social-link">
+                    <i class="icon-paper-plane"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <ul class="currency currency_header">
+              <li>
+                <i class="currency__status currency__status_up">&bull;</i>
+                <span class="currency__value">&dollar; 63.75</span>
+              </li>
+
+              <li>
+                <i class="currency__status currency__status_down">&bull;</i>
+                <span class="currency__value">&euro; 70.50</span>
+              </li>
+
+              <li>
+                <i class="currency__status currency__status_up">&bull;</i>
+                <span class="currency__value">Нефть 64.37</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <div class="header__container">
+          <button class="header__rubric-toggle js-rubric-toggle">
+            <span class="header__rubric-toggle-icon">
+              <i class="icon-burger"></i>
+              <i class="icon-close"></i>
+            </span>
+            <span class="header__rubric-toggle-txt">Рубрики</span>
+          </button>
+
+          <ul class="header__menu">
+			<li><a href="/news">Новости</a></li>
+			<li><a href="/articles">Статьи</a></li>
+			<li><a href="/shows">Программы</a></li>
+			<li><a href="/video">Видео</a></li>
+			<li><a href="/podcasts">Подкасты</a></li>
+			<li><a href="/polls">Опросы</a></li>
+			<li><a href="/special_projects">Спецпроекты</a></li>
+          </ul>
+
+
+          <div class="header__special-link">
+            <!--//<a href="/tags/carskie-dni-2019" class="header__special-link-gold">Царские дни-2019</a>//-->
+            <!--//<a href="/tags/itogi-2018" class="header__special-link-gold">Итоги-2018</a>//-->
+            <!--//<a href="/materials/rubric/vzryv-v-kerchenskom-kolledzhe" style="color: #fff;background: #000">Взрыв в Керчи</a>//-->
+          </div>
+
+
+		          <div class="header__search">
+            <form action="/search" autocomplete="off">
+              <input type="search" name="q" placeholder="Поиск">
+              <button>
+                <i class="icon-search"></i>
+              </button>
+
+			<div class="header__search-dropdown">
+              <label>
+                <input type="radio" name="section" value="all" class="radio" checked>
+                <span>Все публикации</span>
+              </label>
+              <!--//<label>
+                <input type="radio" name="section" value="news" class="radio">
+                <span>Новости</span>
+              </label>//-->
+              <label>
+                <input type="radio" name="section" value="articles" class="radio">
+                <span>Статьи</span>
+              </label>
+              <!--//<label>
+                <input type="radio" name="section" value="experts" class="radio">
+                <span>Мнения</span>
+              </label>
+              <label>
+                <input type="radio" name="section" value="projects" class="radio">
+                <span>Спецпроекты</span>
+              </label>//-->
+            </div>
+            </form>
+          </div>
+        </div>
+
+       <div class="header__drop-sections">
+          <ul class="header__drop-sections-list">
+
+                        <li>
+              <a href="/materials/rubric/politika-2">Политика</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/obrazovanie">Образование</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/obshhestvo">Общество</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/jekonomika">Экономика</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/sport-3">Спорт</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/proisshestvija">Происшествия</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/v-mire">В мире</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/kultura-3">Культура</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/religija">Церковь</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/tehnologii-i-nauka">Технологии и наука</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/avto">Авто</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/medicina-2">Медицина</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/nedvizhimost-2">Недвижимость</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/kuhnja">Кухня</a>
+            </li>
+                        <li><a href="/materials/rubric/ekologiya">Экология</a></li>
+<!--//            <li>
+              <a href="/articles">Все рубрики</a>
+            </li>//-->
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+    
+<div class="ads_after_menu">
+<!-- Yandex.RTB R-A-230529-34 -->
+<div id="yandex_rtb_R-A-230529-34"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-230529-34",
+                renderTo: "yandex_rtb_R-A-230529-34",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+</div>
+
+      <div class="layout-column">
+        <aside class="layout-column__aside">
+
+        
+			
+
+
+          <div class="news">
+
+
+            <h3 class="news__title">
+              <a href="/news">Последние новости</a>
+            </h3>
+
+            <ul class="news__list">
+
+              <li class="news__item">
+				                <a href="/news/artillerija-ne-spaset-national-interest-nazval-uslovija-pobedy-britanii-pri-vtorzhenii-rossii-v-evropu_229336" class="news__link">
+                  <h4 class="news__item-title">
+                    Артиллерия не спасет:  National Interest назвал &quot;условия победы&quot; Британии при &quot;вторжении России в Европу&quot;
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/armia" class="news__item-info-link">Армия</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T22:46">22:46</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/svernet-sheju-vladimiru-vladimirovichu-dombrovskaja-i-babchenko-rasskazali-o-namerenijah-zelenskogo-9-dekabrja_229335" class="news__link">
+                  <h4 class="news__item-title">
+                    &quot;Свернет шею Владимиру Владимировичу&quot;: Домбровская и Бабченко рассказали о &quot;намерениях&quot; Зеленского 9 декабря
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/ukraina" class="news__item-info-link">Украина</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T22:30">22:30</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				<figure class="news__media" style="background-image: url(https://img.tsargrad.tv/cache/6/3/20191117_gaf_rl07_004.jpg/w508h286fill.jpg)">                <a href="/news/poterjav-mat-rebjonok-invalid-nedelju-umiral-vozle-ee-tela-v-zapertoj-kvartire_229334" class="news__link">
+                  <h4 class="news__item-title">
+                    Потеряв мать, ребёнок-инвалид неделю умирал возле её тела в запертой квартире
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/proisshestvija" class="news__item-info-link">Происшествия</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T21:52">21:52</time>
+                </div>
+                </figure>              </li>
+
+				              <li class="news__item">
+				                <a href="/news/novye-ljudi-v-chernom-skuchny-a-odnazhdy-v-gollivude-bezumny-kritiki-nazvali-kinoprovaly-2019-goda_229332" class="news__link">
+                  <h4 class="news__item-title">
+                    Новые &quot;Люди в черном&quot; скучны, а &quot;Однажды в Голливуде&quot; &quot;безумны&quot;: Критики назвали кинопровалы 2019 года
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/kino" class="news__item-info-link">Кино</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T21:33">21:33</time>
+                </div>
+                              </li>
+
+								</ul>
+							<!-- Yandex.RTB R-A-230529-23 -->
+<div id="yandex_rtb_R-A-230529-23"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-230529-23",
+                renderTo: "yandex_rtb_R-A-230529-23",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>							<div class="aside-partners-block"><p><b>Новости партнеров</b></p><div id="unit_91304"><a href="https://advert.mirtesen.ru/">Новости mirtesen.ru</a></div> <script type="text/javascript" charset="utf-8"> (function() { var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true; sc.src = '//news.mirtesen.ru/data/js/91304.js'; sc.charset = 'utf-8'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s); }()); </script></div>
+				<ul class="news__list">
+				              <li class="news__item">
+				                <a href="/news/vremeni-ne-bylo-dumali-kak-vyzhit-glava-administracii-elcina-o-tom-kak-v-1991-godu-sdavali-krym_229333" class="news__link">
+                  <h4 class="news__item-title">
+                    &quot;Времени не было. Думали, как выжить...&quot;: Глава администрации Ельцина - о том, как в 1991 году &quot;сдавали&quot; Крым
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/politika-2" class="news__item-info-link">Политика</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T21:29">21:29</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/strausinym-nado-bylo-poroshenko-vnov-zakidali-jajcami-no-popali-tolko-v-ego-suprugu_229330" class="news__link">
+                  <h4 class="news__item-title">
+                    &quot;Страусиным надо было&quot;: Порошенко вновь закидали яйцами, но попали только в его супругу
+                  </h4>
+				                  <span class="news__item-icon">
+                    <i class="icon-video"></i>
+                                      </span>
+    			                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/politika-2" class="news__item-info-link">Политика</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T20:45">20:45</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/integracija-na-34-moskva-i-minsk-ne-smogli-soglasovat-8-dorozhnyh-kart-iz-31_229329" class="news__link">
+                  <h4 class="news__item-title">
+                    Интеграция на 3/4: Москва и Минск не смогли согласовать 8 дорожных карт из 31
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/novosti-belorussiya" class="news__item-info-link">Белоруссия</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T20:09">20:09</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/razlichaju-dazhe-akcent-uchenye-vyjasnili-chto-sobaki-ponimajut-chelovecheskij-jazyk_229328" class="news__link">
+                  <h4 class="news__item-title">
+                    Различают даже акцент: Учёные выяснили, что собаки понимают человеческий язык
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/zhivotnye" class="news__item-info-link">Животные</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T19:51">19:51</time>
+                </div>
+                              </li>
+
+								</ul>
+				<div class="aside-partners-block"><div id="infox_11502"></div><script type="text/javascript">   (function(w, d, n, s, t) {  w[n] = w[n] || [];  w[n].push(function() {  INFOX11502.renderTo("infox_11502");  });  t = d.getElementsByTagName("script")[0];  s = d.createElement("script");  s.type = "text/javascript";  s.src = "//rb.infox.sg/infox/11502";  s.async = true;  t.parentNode.insertBefore(s, t);  })(this, this.document, "infoxContextAsyncCallbacks11502");  </script></div>
+				<ul class="news__list">
+				              <li class="news__item">
+				                <a href="/news/krivorylye-obrjuzgshie-sushhestva-s-gnilymi-zubami-smi-nashli-rusofobskie-vyskazyvanija-vetlickojv-socsetjah_229327" class="news__link">
+                  <h4 class="news__item-title">
+                    &quot;Криворылые, обрюзгшие существа с гнилыми зубами&quot;: СМИ нашли русофобские высказывания Ветлицкой в соцсетях
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/shou-biznes" class="news__item-info-link">Шоу-бизнес</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T19:25">19:25</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/oni-zadohnulis-vo-sne-vyzhivshij-pri-vzryve-v-nju-deli-rasskazal-uzhasajushhie-podrobnosti-katastrofy-s-desjatkami-pogibshih_229325" class="news__link">
+                  <h4 class="news__item-title">
+                    Они задохнулись во сне: Выживший при взрыве в Нью-Дели рассказал ужасающие подробности катастрофы с десятками погибших
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/pozhar" class="news__item-info-link">Пожар</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T18:57">18:57</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/v-rossii-pojavitsja-chto-to-takoe-smi-opublikovali-prorochestvo-vangi-na-2020-god_229324" class="news__link">
+                  <h4 class="news__item-title">
+                    &quot;В России появится что-то такое&quot;: СМИ опубликовали &quot;пророчество&quot; Ванги на 2020 год
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/obshhestvo" class="news__item-info-link">Общество</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T18:37">18:37</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/28-let-belovezhskim-soglashenijam-kadyrov-jemocionalno-upreknul-elcina-i-gorbacheva-v-razvale-strany_229323" class="news__link">
+                  <h4 class="news__item-title">
+                    28 лет Беловежским соглашениям: Кадыров эмоционально упрекнул Ельцина и Горбачева в развале страны
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/sssr" class="news__item-info-link">СССР</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T18:13">18:13</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/spasal-shhenka-v-hakasii-molodoj-chinovnik-edva-ne-pogib-natrasse_229322" class="news__link">
+                  <h4 class="news__item-title">
+                    Спасал щенка: В Хакасии молодой чиновник едва не погиб на трассе
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/novosti-respublika-hakasiya" class="news__item-info-link">Республика Хакасия</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T17:40">17:40</time>
+                </div>
+                              </li>
+
+				              <li class="news__item">
+				                <a href="/news/papa-razbiraetsja-v-vostochnoj-kultureliza-peskova-priznalas-chto-otec-ne-daet-ej-deneg_229321" class="news__link">
+                  <h4 class="news__item-title">
+                    &quot;Папа разбирается в восточной культуре&quot;: Лиза Пескова призналась, что отец не даёт ей денег
+                  </h4>
+				                </a>
+
+                <div class="news__item-info">
+                                  <a href="/materials/rubric/dmitrii-peskov" class="news__item-info-link">Дмитрий Песков</a>
+                                  <time class="news__item-info-date" datetime="2019-12-08T17:18">17:18</time>
+                </div>
+                              </li>
+
+				
+            </ul>
+
+            <div class="news__cta">
+              <a href="/news" class="news__cta-link">Все новости</a>
+            </div>
+          </div>
+		
+          <a href="/saint/svjashhennomuchenik-kliment_38522" class="saint-day">
+            <div class="saint-day__title">Святой дня</div>
+
+            <div class="saint-day__img">
+              <img src="https://img.tsargrad.tv/cache/5/8/15_-_ikona.jpg/w500h500.jpg" alt="">
+            </div>
+
+            <div class="saint-day__name">
+              Священномученик Климент
+              <small class="hidden">8 декабря – память священномученика Климента, Папы Римского</small>
+            </div>
+          </a>
+
+							          <div class="aside-banner">
+
+<!-- Yandex.RTB R-A-230529-18 -->
+<div id="yandex_rtb_R-A-230529-18"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-230529-18",
+                renderTo: "yandex_rtb_R-A-230529-18",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+          </div>			
+
+
+          <div class="programs-preview">
+            <h3 class="programs-preview__title">
+              <a href="/shows">Авторские программы</a>
+            </h3>
+
+            <ul class="programs-preview__list">
+                          <li>
+                <a href="/shows/rubric/russkaja-mechta">
+                  <img src="/programm_img/rmechta.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/krasnyj-ugol">
+                  <img src="/programm_img/sh.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/pronko-jekonomika">
+                  <img src="/programm_img/pe.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/chestnyj-frjenk">
+                  <img src="/programm_img/frank.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/dezhurnyj-po-redakcii">
+                  <img src="/programm_img/dezhurnyj.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/suhoj-ostatok">
+                  <img src="/programm_img/ostatok.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/indeks-ivatkinoj">
+                  <img src="/programm_img/ivatkina.jpg" alt="">
+                </a>
+              </li>
+                          <li>
+                <a href="/shows/rubric/mobilnyj-deljagin">
+                  <img src="/programm_img/delyagin.jpg" alt="">
+                </a>
+              </li>
+            
+            </ul>
+
+            <div class="news__cta">
+              <a href="/shows" class="news__cta-link">Все программы</a>
+            </div>
+          </div>
+
+
+							          <div class="fly-on-scroll">
+              <div class="fly-on-scroll__content">
+                  <div class="aside-banner">
+<!-- Yandex.RTB R-A-230529-13 -->
+<div id="yandex_rtb_R-A-230529-13"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-230529-13",
+                renderTo: "yandex_rtb_R-A-230529-13",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+                  </div>
+              </div>
+            </div>			
+
+        </aside>
+
+        <div class="layout-column__main">
+        	<div class="articles-group">
+
+		
+			<section class="article" data-publication-id="148409" data-current-url="/news/google-perevodchik-chto-to-znaet-servis-nachal-govorit-predskazanijami_148409" data-next-article="/moretext/poperechnyj-sluchaj-vedushhij-norkin-trebuet-zavesti-ugolovnoe-delo-na-populjarnogo-komika_148402?prefix=news">
+
+		<div class="article__content js-mediator-container148409">
+
+			
+			
+
+			<div class="article__meta article__meta_plot">
+				<div class="article__meta-labels">
+				<time datetime="">23 Июля 2018 20:41</time>
+								/
+				<a href="/materials/rubric/internet">Новые технологии</a>
+				
+					<!--//<div class="article__meta-reading">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 48 48"><defs><path id="a" d="M0 0h48v48H0z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path d="M42 20c-2.21 0-4 1.79-4 4v6H10v-6c0-2.21-1.79-4-4-4s-4 1.79-4 4v10c0 2.2 1.8 4 4 4h36c2.2 0 4-1.8 4-4V24c0-2.21-1.79-4-4-4zm-6-10H12c-2.2 0-4 1.8-4 4v4.31c2.32.83 4 3.03 4 5.63V28h24v-4.06c0-2.6 1.68-4.8 4-5.63V14c0-2.2-1.8-4-4-4z" clip-path="url(#b)"/></svg>
+                    Читать:
+                    <span>1 мин.</span>
+                  </div>//-->
+     			</div>
+			</div>
+
+
+
+			<h1 class="article__title">Google-переводчик что-то знает: Сервис начал говорить предсказаниями</h1>
+
+
+								<div class="article__gallery">
+					<div class="article__gallery-main">
+						<ul class="article__gallery-main-list">
+							<li class="active">
+								<img src="https://img.tsargrad.tv/cache/5/c/24152_jpg.jpeg/w720h405fill.jpeg" alt="Google-переводчик что-то знает: Сервис начал говорить предсказаниями" title="Google-переводчик что-то знает: Сервис начал говорить предсказаниями">
+															</li>
+													</ul>
+
+						<div class="article__gallery-main-prev">
+							<svg viewBox="0 0 24 24" width="24" height="24"><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+						</div>
+						<div class="article__gallery-main-next">
+							<svg viewBox="0 0 24 24" width="24" height="24"><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+						</div>
+					</div>
+
+					<div class="article__gallery-preview">
+
+					</div>
+
+										<div class="article__gallery-copyright">Фото: globallookpress.com</div>
+									</div>
+
+				
+				<div class="article__intro">
+					<p>Пользователи заметили, что переводчик Google может выдавать странные выражения, похожие на предсказания или пророчества.</p>
+				</div>
+
+				
+	<div class="js-mediator-article148409 only__text">
+			<p>Курьезную особенность сервиса Google Translate подметили пользователи сайта Reddit. Так, если предлагать переводчику перевести какие-либо слова с редких языков, то он начнет выдавать пророчества.</p>
+<p>Так, например, происходит с языком народности маори. Если 17 раз набрать по-английски слово dog, то он выдаст странное предсказание:</p>
+<p>&laquo;На часах Судного дня без трех минут двенадцать. Люди и драматические события, во времена которых мы живем, указывают на то, что мы приближаемся к концу света и возвращению Иисуса&raquo;.</p>
+<p>Аналогичная ситуация и с рядом других слов и языков. Скорее всего, речь идет не о какой-то особенности переводчика Google, а о том, что какие-то пользователи самостоятельно прописывают перевод того или иного слова с помощью функции &laquo;Предложить перевод&raquo;.</p>
+	
+
+			<p><img src="https://up.tsargrad.tv/uploads/%D0%92%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0%20%D1%82%D1%8B%D1%81%D1%8F%D1%87%D0%B5%D0%BB%D0%B5%D1%82%D0%B8%D1%8F%20%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D1%8B%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D1%87%D0%B8%D0%BA-%D0%93%D1%83%D0%B3%D0%BB.jpg" alt="" width="846" height="399" /></p>
+		</div>
+
+				<!-- mediator -->
+<script id="js-mpf-mediator-init" class="js-mediator-script" data-counter="2820668" >
+!function(e){function t(t,n){if(!(n in e)){for(var r,a=e.document,i=a.scripts,o=i.length;o--;)if(-1!==i[o].src.indexOf(t)){r=i[o];break}if(!r){r=a.createElement("script"),r.type="text/javascript",r.async=!0,r.defer=!0,r.src=t,r.charset="UTF-8";var d=function(){var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(r,e)};"[object Opera]"==e.opera?a.addEventListener?a.addEventListener("DOMContentLoaded",d,!1):e.attachEvent("onload",d):d()}}}t("//mediator.mail.ru/script/2820668/","_mediator")}(window);
+</script>
+<!--/ mediator -->				<div id="place_js_mediator" class="js-script"></div>
+
+
+
+							<div id="place_js_video" class="js-script"></div>
+				<div style="height:15px"></div>
+			
+								
+				
+                <div class="article__subscribe">
+                  <a href="https://zen.yandex.ru/tsargrad.tv"  onclick="yaCounter27738642.reachGoal('click_ya_dzen');return true;" target="_blank" class="article__subscribe-logo">
+                    <img src="/img/yandex-dzen-logo.png" alt="" width="44" height="44">
+                  </a>
+
+                  <div class="article__subscribe-content">
+                    Подписывайтесь на канал <strong>Царьград</strong> в <a href="https://zen.yandex.ru/tsargrad.tv"  onclick="yaCounter27738642.reachGoal('click_ya_dzen');return true;" target="_blank">Яндекс Дзен</a>, чтобы не пропускать интересные новости и статьи
+                  </div>
+                </div>
+
+				<!-- Composite Start --> <div id="M394319ScriptRootC674171"> <div id="M394319PreloadC674171"></div> <script> (function(){ var D=new Date(),d=document,b='body',ce='createElement',ac='appendChild',st='style',ds='display',n='none',gi='getElementById',lp=d.location.protocol,wp=lp.indexOf('http')==0?lp:'https:'; var i=d[ce]('iframe');i[st][ds]=n;d[gi]("M394319ScriptRootC674171")[ac](i);try{var iw=i.contentWindow.document;iw.open();iw.writeln("<ht"+"ml><bo"+"dy></bo"+"dy></ht"+"ml>");iw.close();var c=iw[b];} catch(e){var iw=d;var c=d[gi]("M394319ScriptRootC674171");}var dv=iw[ce]('div');dv.id="MG_ID";dv[st][ds]=n;dv.innerHTML=674171;c[ac](dv); var s=iw[ce]('script');s.async='async';s.defer='defer';s.charset='utf-8';s.src=wp+"//jsc.lentainform.com/t/s/tsargrad.tv.674171.js?t="+D.getYear()+D.getMonth()+D.getUTCDate()+D.getUTCHours();c[ac](s);})(); </script> </div> <!-- Composite End -->
+
+
+				
+			              <div class="article__social">
+                  <div class="article__social-title">Поделиться:</div>
+                  <div class="article__social-plugin">
+	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+	<script src="//yastatic.net/share2/share.js"></script>
+	<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,twitter,lj,telegram"></div>
+                  </div>
+                </div>
+			
+				
+<div class="collapse-item__group">
+
+				                <div class="article__tags">
+                  <span class="article__tags-title">Теги:</span>
+                   <a href="/tags/obshhestvo">Общество</a>, <a href="/tags/google">Google</a>, <a href="/tags/socseti">соцсети</a>, <a href="/tags/novye-razrabotki">новые разработки</a>, <a href="/tags/internet">интернет</a>                </div>
+				
+
+							<!-- Yandex.RTB R-A-230529-20 -->
+<div id="yandex_rtb_R-A-230529-20"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-230529-20",
+                renderTo: "yandex_rtb_R-A-230529-20",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+<br/>			
+
+
+				                <div class="article__similar-news">
+                  <strong>Ссылки по теме:</strong>
+                                    <p>
+                    <a href="/articles/narvatsja-na-shtraf-zachem-google-nastupaet-na-grabli-microsoft_148348" target="_blank">Нарваться на штраф: Зачем Google наступает «на грабли» Microsoft?</a>
+                  </p>
+                                    <p>
+                    <a href="/news/google-trollit-trampa-amerikanskogo-prezidenta-nahodjat-po-zaprosu-idiot_147872" target="_blank">Google троллит Трампа: Американского президента находят по запросу «idiot»</a>
+                  </p>
+                                    <p>
+                    <a href="/articles/kak-evropa-pressuet-google-i-vyigraet-li-ot-jetogo-jandeks_147635" target="_blank">Как Европа прессует Google и выиграет ли от этого «Яндекс»</a>
+                  </p>
+                                  </div>
+               
+
+
+
+
+
+                  <div class="collapse-item">
+                    <div class="collapse-item__title js-collapse-toggle">
+                      <h3 class="article__comments-title">
+					Оставить комментарий
+                      </h3>
+                    </div>
+
+                    <div class="collapse-item__toggle js-collapse-toggle"></div>
+
+					<div class="collapse-item__body">
+						<div class="article__comments-body">
+
+							<div id="commentBody" data-url="https://tsargrad.tv/news/google-perevodchik-chto-to-znaet-servis-nachal-govorit-predskazanijami_148409" ></div>
+						</div>
+					</div>
+				</div>
+</div>
+
+                <div class="article__paginator">
+                                  <a href="/news/poperechnyj-sluchaj-vedushhij-norkin-trebuet-zavesti-ugolovnoe-delo-na-populjarnogo-komika_148402" class="article__page-prev">
+                    <i class="material-prev"></i>
+                    <time datetime="2018-07-23T20:39">23 Июля 20:39</time>
+                    <span>Поперечный случай: Ведущий Норкин требует завести уголовное дело на популярного комика</span>
+                  </a>
+                
+                                  <a href="/news/vsplesk-gormonov-popolam-s-chudovishhnym-udovolstviem-akter-pashinin-upivaetsja-vojnoj-v-donbasse_148407" class="article__page-next">
+                    <i class="material-next"></i>
+                    <time datetime="T20:45">23 Июля 20:45</time>
+                    <span>Всплеск гормонов пополам с чудовищным удовольствием: Актер Пашинин упивается войной в Донбассе</span>
+                  </a>
+                                </div>
+
+
+
+
+
+			
+	
+
+
+                <div class="article__banner">
+
+		 			<div class="other-news__title">Новости партнёров</div>
+			<!-- Composite Start --> <div id="M394319ScriptRootC690231"> <div id="M394319PreloadC690231"> Загрузка... </div> </div> <script> (function () { var script = document.createElement('script'); script.src = "//jsc.lentainform.com/t/s/tsargrad.tv.690231.js?t=" + ((d = new Date()) ? '' + d.getUTCFullYear() + d.getUTCMonth() + d.getUTCDate() + d.getUTCHours() : ''); script.async = true; document.body.appendChild(script); })(); </script> <!-- Composite End -->
+
+			<script async src="https://jsn.24smi.net/smi.js"></script> <div class="smi24__informer" data-smi-templatesrc="https://jsn.24smi.net/e/3/12733.js"></div> <script>(window.smiq = window.smiq || []).push({});</script>
+
+			<script async src="https://jsn.24smi.net/smi.js"></script> <div class="smi24__informer" data-smi-templatesrc="https://jsn.24smi.net/8/7/12734.js"></div> <script>(window.smiq = window.smiq || []).push({});</script>
+
+		                </div>
+
+
+	
+			</div>
+		</section>
+
+		<div class="article_next__overlay"></div>
+					</div>
+        </div>
+
+        <aside class="layout-column__aside">
+
+<script src="/flowplayer/flowplayer.min.js?v2"></script>
+<script src="/flowplayer/flowplayer.hlsjs.min.js"></script>
+<script src="/flowplayer/flowplayer.quality-selector.min.js"></script>
+<script type="text/javascript">flowplayer.conf.key = "$600481436192301";</script>
+
+<script>
+/* global event listeners for demo purposes, omit in production */
+flowplayer(function (api, root) {
+  var instanceId = root.getAttribute("data-flowplayer-instance-id"),
+      engineInfo = document.getElementById("engine" + instanceId),
+      vtypeInfo = document.getElementById("vtype" + instanceId),
+      detail = document.getElementById("detail" + instanceId);
+
+  api.on("ready", function (e, api, video) {
+    var engineName = api.engine.engineName;
+
+
+    engineInfo.innerHTML = engineName;
+    vtypeInfo.innerHTML = video.type;
+    if (engineName !== "hlsjs") {
+      detail.innerHTML = "video source: " + video.src;
+    }
+
+  }).on("progress", function (e, api) {
+    var hlsengine = api.engine.hlsjs;
+
+    if (hlsengine) {
+      var current = hlsengine.currentLevel,
+          level = hlsengine.levels[current],
+          info;
+
+      if (level) {
+        info = api.conf.clip.live
+            ? level.bitrate / 1000 + " kbps"
+            : level.height + "p";
+
+        detail.innerHTML = "HLS level " + (current > -1
+            ? current + ": " + info
+            : "");
+      }
+    }
+  });
+
+});
+/* end global event listeners setup */
+
+
+window.onload = function () {
+
+
+
+  flowplayer(
+
+    "#hlsjslive", {
+    splash: true,
+    embed: false,
+    ratio: 9/16,
+
+
+    clip: {
+      hlsQualities: [
+        // dimensions of all levels are the same
+        // set bitrate labels explicitly instead
+        { level: 0, label: "240p" },
+        { level: 1, label: "360p" },
+        { level: 2, label: "480p" },
+        { level: 3, label: "720p" }
+      ],
+
+      hlsjs: {
+        // slightly better behaviour for this problem stream
+        smoothSwitching: false,
+    startLevel: 3
+
+      },
+      live: true,
+      sources: [
+        { type: "application/x-mpegurl",
+          src: "https://tsargrad-livehls.cdnvideo.ru/smils/tsargrad-livehls.m3u8" }
+      ]
+    }
+
+
+  });
+
+};
+
+
+</script>
+
+ <!--//https://tsargrad-livehls.cdnvideo.ru/smils/tsargrad-livehls.m3u8//-->
+          <div class="video__aside">
+            <h4 class="video__aside-title">
+              Онлайн эфир
+            </h4>
+
+            <div class="video__aside-media">
+				<div  style="background:url(https://media.tsargrad.tv/mp4v2/random.jpg?1600765967 );background-size: cover;background-repeat: no-repeat;background-position: center center;" id="hlsjslive" class="is-closeable flowclass"></div>
+
+            </div>
+          </div>
+
+
+							          <div class="aside-banner">
+<!--AdFox START-->
+<!--adv.tsargrad-->
+<!--Площадка: Царьград / * / *-->
+<!--Тип баннера: 240*400-->
+<!--Расположение: <верх страницы>-->
+<div id="adfox_1496139520129589"></div>
+<script>
+    window.Ya.adfoxCode.create({
+        ownerId: 258134,
+        containerId: 'adfox_1496139520129589',
+        params: {
+            pp: 'g',
+            ps: 'cmot',
+            p2: 'fpxt'
+        }
+    });
+</script>
+          </div>			
+
+		          <article class="main-news-aside">
+            <h3>
+              <a href="#">Главная новость</a>
+            </h3>
+
+            <figure>
+              <a href="/news/chego-zhdat-ukraine-ot-normandskogo-sammita-v-parizhe_229331">
+                <img src="https://img.tsargrad.tv/cache/e/9/20181111_gaf_ic06_064.jpg/w344h194fill.jpg" alt="">
+                                </a>
+            </figure>
+
+            <h4 class="main-news-aside__title">
+              <a href="/news/chego-zhdat-ukraine-ot-normandskogo-sammita-v-parizhe_229331">Чего ждать Украине от &quot;нормандского&quot; саммита в Париже</a>
+            </h4>
+
+            <p>В преддверии завтрашнего &quot;нормандского&quot; саммита в Париже пресс-секретарь украинского президента призвала не...</p>
+
+            <div class="news__item-info">
+              <a href="/materials/rubric/politika-2" class="news__item-info-link">Политика</a>
+              <time class="news__item-info-date" datetime="2019-12-08T20:48">20:48</time>
+            </div>
+          </article>
+
+
+		
+					<div id="grf_tsargradtv_2"></div>
+		
+
+							          <div class="fly-on-scroll">
+            <div class="fly-on-scroll__content">
+                <div class="aside-banner">
+<!-- Yandex.RTB R-A-230529-19 -->
+<div id="yandex_rtb_R-A-230529-19"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-230529-19",
+                renderTo: "yandex_rtb_R-A-230529-19",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+                </div>
+            </div>			
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+
+		
+      <div class="footer__body">
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="footer__column">
+              <div class="footer__logo">
+                <img src="/img/logo_3x.png" alt="" width="209" height="37">
+              </div>
+
+              <address>
+                125375, Москва, ул. Тверская, д.7, этаж 5, помещение I, комната 37<br>
+                Тел.: <a href="tel:+74953747773">+7 (495) 374-77-73</a><br/>
+                <a href="mailto:info@tsargrad.tv">info@tsargrad.tv</a>
+                <br/>Адрес для пресс-релизов <a href="mailto:press@tsargrad.tv">press@tsargrad.tv</a>
+              </address>
+            </div>
+
+            <div class="footer__column">
+              <ul class="footer__menu">
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/articles">Статьи</a></li>
+                <li><a href="/video">Видео</a></li>
+                <li><a href="/podcasts">Подкасты</a></li>
+                <li><a href="/experts">Мнения</a></li>
+                <li><a href="/shows">Программы</a></li>
+                <li><a href="/polls">Опросы</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__column footer__column_wide">
+              <ul class="footer__menu footer__menu_horizontal">
+                <li><a href="/contacts">Контакты</a></li>
+                <li><a href="/advertisers">Рекламодателям</a></li>
+                <li><a href="/pervyi_russkij">О телеканале</a></li>
+              </ul>
+
+              <div class="footer__description">
+                <p>Средство массовой информации сетевое издание &laquo;Царьград/Tsargrad&raquo; зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций. Свидетельство регистрации СМИ ЭЛ № ФС 77 &mdash; 63691 от &laquo;10&raquo; ноября 2015.</p>
+                <p>
+                  Главный редактор &mdash; Шаройкина Е.А.<br>
+                  Учредитель &mdash; НАО &laquo;Царьград медиа&raquo;<br>
+                  Адрес редакции &mdash; 125375, Москва, ул. Тверская, д.7, этаж 5, помещение I, комната 37
+                </p>
+                <p>Копирование и использование полных материалов запрещено, частичное цитирование возможно только при условии гиперссылки на сайт tsargrad.tv. Гиперссылка должна размещаться непосредственно в тексте, воспроизводящем оригинальный материал tsargrad.tv. Редакция не несет ответственности за информацию и мнения, высказанные в комментариях читателей и новостных материалах, составленных на основе сообщений читателей.</p>
+                <p>&copy; 2019, все права защищены. НАО &laquo;Царьград медиа&raquo;.</p>
+                <p class="align-right">
+                  <a href="/privacy_policy.doc">Политика обработки персональных данных</a><!--//<br/>
+                  <a href="/agitation">Прайс-лист на размещение агитационных материалов, 2019 год</a>//-->
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <div class="footer__search">
+              <form action="/search">
+                <input type="search" name="q" placeholder="Поиск">
+                <button>
+                  <i class="icon-search"></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="footer__social">
+              <a target="_blank" href="https://vk.com/tsargradtv" title="Царьград в VK"><i class="icon-vk"></i></a>
+              <a target="_blank" href="https://www.facebook.com/tsargradtv" title="Царьград в facebook"><i class="icon-facebook"></i></a>
+              <a target="_blank" href="http://www.ok.ru/tsargradtv" title="Царьград в Одноклассники"><i class="icon-odnoklassniki"></i></a>
+              <a target="_blank" href="https://www.youtube.com/tsargradtv" title="Царьград в youtube"><i class="icon-youtube-play"></i></a>
+              <a target="_blank" href="https://twitter.com/tsargradtv" title="Царьград в twitter"><i class="icon-twitter"></i></a>
+              <a target="_blank" href="https://ttttt.me/tsargradtv" title="Царьград в telegram"><i class="icon-paper-plane"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>  </div>
+
+  <button class="page-up js-page-up">Наверх</button>
+
+    <div class="fly-header">
+    <div class="fly-header__top">
+      <div class="header__logo">
+        <a href="/"><img src="/img/logo_1x.png" srcset="/img/logo_2x.png 2x, /img/logo_3x.png 3x" alt=""></a>
+      </div>
+    </div>
+
+    <div class="fly-header__bottom">
+      <div class="header__container">
+        <button class="header__rubric-toggle js-rubric-toggle">
+          <span class="header__rubric-toggle-icon">
+            <i class="icon-burger"></i>
+            <i class="icon-close"></i>
+          </span>
+          <span class="header__rubric-toggle-txt">Рубрики</span>
+        </button>
+
+        <ul class="header__menu">
+			<li><a href="/news">Новости</a></li>
+			<li><a href="/articles">Статьи</a></li>
+			<li><a href="/video">Видео</a></li>
+			<li><a href="/podcasts">Подкасты</a></li>
+			<li><a href="/shows">Программы</a></li>
+			<li><a href="/polls">Опросы</a></li>
+			<li><a href="/special_projects">Спецпроекты</a></li>
+        </ul>
+
+        <div class="header__special-link">
+
+          <!--//<a href="/tags/carskie-dni-2019" class="header__special-link-gold">Царские дни-2019</a>//-->
+          <!--//<a href="/tags/itogi-2018" class="header__special-link-gold">Итоги-2018</a>//-->
+          <!--//<a href="/materials/rubric/vzryv-v-kerchenskom-kolledzhe" style="color: #fff;background: #000">Взрыв в Керчи</a>//-->
+        </div>
+
+                  <div class="header__search">
+            <form action="/search" autocomplete="off">
+              <input type="search" name="q" placeholder="Поиск">
+              <button>
+                <i class="icon-search"></i>
+              </button>
+
+			<div class="header__search-dropdown">
+              <label>
+                <input type="radio" name="section" value="all" class="radio" checked>
+                <span>Все публикации</span>
+              </label>
+              <!--//<label>
+                <input type="radio" name="section" value="news" class="radio">
+                <span>Новости</span>
+              </label>//-->
+              <label>
+                <input type="radio" name="section" value="articles" class="radio">
+                <span>Статьи</span>
+              </label>
+              <!--//<label>
+                <input type="radio" name="section" value="experts" class="radio">
+                <span>Мнения</span>
+              </label>
+              <label>
+                <input type="radio" name="section" value="projects" class="radio">
+                <span>Спецпроекты</span>
+              </label>//-->
+            </div>
+            </form>
+          </div>      </div>
+
+	       <div class="header__drop-sections">
+          <ul class="header__drop-sections-list">
+
+                        <li>
+              <a href="/materials/rubric/politika-2">Политика</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/obrazovanie">Образование</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/obshhestvo">Общество</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/jekonomika">Экономика</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/sport-3">Спорт</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/proisshestvija">Происшествия</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/v-mire">В мире</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/kultura-3">Культура</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/religija">Церковь</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/tehnologii-i-nauka">Технологии и наука</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/avto">Авто</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/medicina-2">Медицина</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/nedvizhimost-2">Недвижимость</a>
+            </li>
+                        <li>
+              <a href="/materials/rubric/kuhnja">Кухня</a>
+            </li>
+                        <li><a href="/materials/rubric/ekologiya">Экология</a></li>
+<!--//            <li>
+              <a href="/articles">Все рубрики</a>
+            </li>//-->
+          </ul>
+        </div>    <!--//</div>//-->
+  </div>
+</div>
+
+
+							
+	
+  <script src="/js/plugins.js?v1"></script>
+  <script src="/js/main.js?v33"></script>
+  <script src="/js/jquery.simpleWeather.min.js"></script>
+
+	
+
+	
+<script async src="https://yastatic.net/pcode-native/loaders/loader.js"></script>
+<script>
+    (yaads = window.yaads || []).push({
+        id: "342425-1",
+        render: "#id-342425-1"
+    });
+</script>
+
+<script type="text/javascript" src="//code.giraff.io/data/widget-tsargradtv.js" async></script>
+
+	</body>
+
 </html>
