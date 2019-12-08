@@ -1,1208 +1,763 @@
 
 <!DOCTYPE html>
-<html lang="en-US" id="arve" prefix="og: http://ogp.me/ns#">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<title>Lead Generation Landing Page: 10 Steps to a High-Conversion Page</title>
+<html>
+<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#'>
+<meta charset='utf-8'>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c04af4d751","applicationID":"15684236","transactionName":"JwwLTUENWQ1WRx9HUwURBlFWERoPVkI=","queueTime":0,"applicationTime":854,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"c04af4d751",applicationID:"15684236"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content='100008790183428' property='fb:admins'>
+<meta content='Interpreters Travel' property='og:site_name'>
+<meta content='Interpreters Travel' property='og:title'>
+<meta content='&lt;div class=&#39;mobile-hide&#39;&gt;Устные переводчики. По всему миру&lt;/div&gt;
+ | Interpreters Travel' property='og:description'>
+<link href='https://www.interpreters.travel/ru.amp' rel='amphtml'>
 
-<!-- Google Tag Manager for WordPress by gtm4wp.com -->
-<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
-	var gtm4wp_datalayer_name = "dataLayer";
-	var dataLayer = dataLayer || [];
-//]]>
+<link href='https://www.interpreters.travel/en/' hreflang='en' rel='alternate'>
+<link href='https://www.interpreters.travel/ru/' hreflang='ru' rel='alternate'>
+<link href='https://www.interpreters.travel/de/' hreflang='de' rel='alternate'>
+<link href='https://www.interpreters.travel/en/' hreflang='x-default' rel='alternate'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='xKAjRicGHfjBlUQw28eS0fKTkagME4WEXDzTabSrwpU' name='google-site-verification'>
+<title>Interpreters Travel</title>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'>
+<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<meta content='Устные переводчики. По всему миру. Почему interpreters.travel? Проверенные переводчики и реальные отзывы клиентов
+' name='description'>
+<link async="async" data-turbolinks-track="true" href="https://assets.interpreters.travel/assets/application-14a92db3463db399cdc7a86f84ff4c79.css" media="all" rel="stylesheet" />
+<script data-turbolinks-track="true" src="https://assets.interpreters.travel/assets/application-9ea5a658addf6a158b5f0d68fb301c39.js"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="/AQv43cPvcXOmkcIIcUtCkzEhqVylBafevpa2tc5D1g=" name="csrf-token" />
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '880184659014223');
+fbq('track', 'PageView');
 </script>
-<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
-<!-- This site is optimized with the Yoast SEO Premium plugin v6.2 - https://yoa.st/1yg?utm_content=6.2 -->
-<meta name="description" content="Want to generate more leads for your sales pipeline? Get the 10-step process for creating an effective lead generation landing page (with tips &amp; examples)."/>
-<link rel="canonical" href="https://www.saleshacker.com/lead-generation-landing-page-examples-best-practices/" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Lead Generation Landing Page: 10 Steps to a High-Conversion Page" />
-<meta property="og:description" content="Want to generate more leads for your sales pipeline? Get the 10-step process for creating an effective lead generation landing page (with tips &amp; examples)." />
-<meta property="og:url" content="https://www.saleshacker.com/lead-generation-landing-page-examples-best-practices/" />
-<meta property="og:site_name" content="Sales Hacker" />
-<meta property="article:publisher" content="https://www.facebook.com/saleshackerinc/" />
-<meta property="article:tag" content="Articles" />
-<meta property="article:section" content="Lead Generation" />
-<meta property="article:published_time" content="2019-08-26T01:00:44-07:00" />
-<meta property="article:modified_time" content="2019-11-21T06:29:53-08:00" />
-<meta property="og:updated_time" content="2019-11-21T06:29:53-08:00" />
-<meta property="og:image" content="https://www.saleshacker.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400.jpg" />
-<meta property="og:image:secure_url" content="https://www.saleshacker.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400.jpg" />
-<meta property="og:image:width" content="1400" />
-<meta property="og:image:height" content="740" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Want to generate more leads for your sales pipeline? Get the 10-step process for creating an effective lead generation landing page (with tips &amp; examples)." />
-<meta name="twitter:title" content="Lead Generation Landing Page: 10 Steps to a High-Conversion Page" />
-<meta name="twitter:site" content="@saleshacker" />
-<meta name="twitter:image" content="https://www.saleshacker.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400.jpg" />
-<meta name="twitter:creator" content="@saleshacker" />
-<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.saleshacker.com\/","name":"Sales Hacker","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.saleshacker.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.saleshacker.com\/lead-generation-landing-page-examples-best-practices\/","sameAs":["https:\/\/www.facebook.com\/saleshackerinc\/","https:\/\/www.instagram.com\/saleshackerconf\/","https:\/\/www.linkedin.com\/company\/sales-hacker","https:\/\/www.youtube.com\/user\/SalesHacker","https:\/\/www.pinterest.com\/saleshacker\/","https:\/\/twitter.com\/saleshacker"],"@id":"#organization","name":"Sales Hacker","logo":"https:\/\/www.saleshacker.com\/wp-content\/uploads\/2016\/02\/sales-hacker-logo-dark-blue@2x.png"}</script>
-<!-- / Yoast SEO Premium plugin. -->
-
-<link rel='dns-prefetch' href='//w.soundcloud.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Sales Hacker &raquo; Feed" href="https://www.saleshacker.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Sales Hacker &raquo; Comments Feed" href="https://www.saleshacker.com/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Sales Hacker &raquo; Lead Generation Landing Page: 10 Steps to a High-Conversion Page Comments Feed" href="https://www.saleshacker.com/lead-generation-landing-page-examples-best-practices/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.saleshacker.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='tm_clicktotweet-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/click-to-tweet-by-todaymade/assets/css/styles.css?ver=5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='wpfront-scroll-top-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/wpfront-scroll-top/css/wpfront-scroll-top.min.css?ver=2.0.2' type='text/css' media='all' />
-<link rel='stylesheet' id='understrap-styles-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/themes/saleshacker-2019/css/theme.min.css?ver=0.9.3.1573512522' type='text/css' media='all' />
-<link rel='stylesheet' id='rpt_front_style-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/related-posts-thumbnails/assets/css/front.css?ver=1.6.2' type='text/css' media='all' />
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/wp-scroll-depth/js/jquery-scrolldepth/jquery.scrolldepth.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.2'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-social-tracker.js?ver=1.11.2'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-youtube.js?ver=1.11.2'></script>
-<script type='text/javascript' src='https://w.soundcloud.com/player/api.js?ver=1.0'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-soundcloud.js?ver=1.11.2'></script>
-<link rel='https://api.w.org/' href='https://www.saleshacker.com/wp-json/' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.saleshacker.com/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.saleshacker.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='shortlink' href='https://www.saleshacker.com/?p=10759' />
-<link rel="alternate" type="application/json+oembed" href="https://www.saleshacker.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.saleshacker.com%2Flead-generation-landing-page-examples-best-practices%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://www.saleshacker.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.saleshacker.com%2Flead-generation-landing-page-examples-best-practices%2F&#038;format=xml" />
-
-
-<!-- This site uses the Open External Links in a New Window plugin v1.4 by WebFactory Ltd. Download it for free at https://wordpress.org/extend/plugins/open-external-links-in-a-new-window/ -->
-<script type="text/javascript">//<![CDATA[
-  function external_links_in_new_windows_loop() {
-    if (!document.links) {
-      document.links = document.getElementsByTagName('a');
-    }
-    var change_link = false;
-    var force = '';
-    var ignore = '';
-
-    for (var t=0; t<document.links.length; t++) {
-      var all_links = document.links[t];
-      change_link = false;
-      
-      if(document.links[t].hasAttribute('onClick') == false) {
-        // forced if the address starts with http (or also https), but does not link to the current domain
-        if(all_links.href.search(/^http/) != -1 && all_links.href.search('www.saleshacker.com') == -1 && all_links.href.search(/^#/) == -1) {
-          // console.log('Changed ' + all_links.href);
-          change_link = true;
-        }
-          
-        if(force != '' && all_links.href.search(force) != -1) {
-          // forced
-          // console.log('force ' + all_links.href);
-          change_link = true;
-        }
-        
-        if(ignore != '' && all_links.href.search(ignore) != -1) {
-          // console.log('ignore ' + all_links.href);
-          // ignored
-          change_link = false;
-        }
-
-        if(change_link == true) {
-          // console.log('Changed ' + all_links.href);
-          document.links[t].setAttribute('onClick', 'javascript:window.open(\''+all_links.href+'\'); return false;');
-          document.links[t].removeAttribute('target');
-        }
-      }
-    }
-  }
-  
-  // Load
-  function external_links_in_new_windows_load(func)
-  {  
-    var oldonload = window.onload;
-    if (typeof window.onload != 'function'){
-      window.onload = func;
-    } else {
-      window.onload = function(){
-        oldonload();
-        func();
-      }
-    }
-  }
-
-  external_links_in_new_windows_load(external_links_in_new_windows_loop);
-  //]]></script>
-
-    <style>
-        .wpsp_arrow_pagi{
-            cursor: pointer;
-        }
-    </style>
-
-    <script>
-	jQuery( document ).ready(function(){
-		jQuery.scrollDepth({
-			elements: [''],
-			percentage: true,
-			userTiming: true,
-			pixelDepth: true,
-			nonInteraction: false,
-			gtmOverride: false,
-	});
-});
-</script>
-
-<!-- Google Tag Manager for WordPress by gtm4wp.com -->
-<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
-	var dataLayer_content = {"pageTitle":"Lead Generation Landing Page: 10 Steps to a High-Conversion Page","pagePostType":"post","pagePostType2":"single-post","pageCategory":["lead-generation","sales-enablement"],"pageAttributes":["articles"],"pagePostAuthor":"Brandon Weaver","pagePostDate":"August 26, 2019","pagePostDateYear":"2019","pagePostDateMonth":"08","pagePostDateDay":"26"};
-	dataLayer.push( dataLayer_content );//]]>
-</script>
-<script data-cfasync="false">//<![CDATA[
+<script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PSSSW8');//]]>
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKXTKHB');
 </script>
-<!-- End Google Tag Manager -->
-<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="pingback" href="https://www.saleshacker.com/xmlrpc.php">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Sales Hacker - The World&#039;s Largest Community for B2B Sales">
-      <style>
-      #related_posts_thumbnails li{
-          border-right: 1px solid #dddddd;
-          background-color: #ffffff      }
-      #related_posts_thumbnails li:hover{
-          background-color: #eeeeee;
-      }
-      .relpost_content{
-          font-size: 12px;
-          color: #333333;
-      }
-      .relpost-block-single{
-          background-color: #ffffff;
-          border-right: 1px solid  #dddddd;
-          border-left: 1px solid  #dddddd;
-          margin-right: -1px;
-      }
-      .relpost-block-single:hover{
-          background-color: #eeeeee;
-      }
-      </style>
-
-  <script type="text/javascript">var algolia = {"debug":false,"application_id":"DEG9LRKOXB","search_api_key":"b5015bc31b6d5b72c917523d9243662c","powered_by_enabled":true,"query":"","autocomplete":{"sources":[],"input_selector":"input[name='s']:not('.no-autocomplete')"},"indices":{"searchable_posts":{"name":"saleshacker_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><link rel="icon" href="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/cropped-SH_Logo_Navy_Profile_SH-04-1-32x32.png" sizes="32x32" />
-<link rel="icon" href="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/cropped-SH_Logo_Navy_Profile_SH-04-1-192x192.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2015/03/cropped-SH_Logo_Navy_Profile_SH-04-1-180x180.png" />
-<meta name="msapplication-TileImage" content="https://www.saleshacker.com/wp-content/uploads/2015/03/cropped-SH_Logo_Navy_Profile_SH-04-1-270x270.png" />
+<noscript>
+<img height='1' src='https://www.facebook.com/tr?id=880184659014223&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
+</noscript>
 </head>
+<body class='searches new  locale-ru'>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-MKXTKHB' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<div id='site'>
+<script>
+  (function() {
+    I18n.defaultLocale = "en";
+  
+    I18n.locale = "ru";
+  
+  }).call(this);
+</script>
+<!-- TOP -->
+<div id='top'>
+<div class='content'>
+<a class="mobile-show logo-white" href="/ru"><div class='mobile-show'><img alt="" src="https://assets.interpreters.travel/assets/white_logo-916cc181314b026d5121764a702fbd02.png" /></div>
+</a><div class='top-menu-trigger mobile-show'>Menu</div>
+<div class='mobile-hide'><ul class='top_menu'>
+<li class='account-link'>
+<a href="/ru/users/sign_in"><span class='user-icon'>Вход</span>
+</a></li>
+<li class='mobile-hide'><a href="https://cp.interpreters.travel">Вход для переводчиков</a></li>
+<li class='mobile-hide'><a href="/ru/phone">Звонки с переводчиками</a></li>
+<li class='support-link'><a href="/ru/help/support">Поддержка 24/7</a></li>
+<li class='mobile-show cabinet_sidebar_menu_calls'><a href="/ru/phone">Звонки с переводчиками</a></li>
 
-<body class="post-template-default single single-post postid-10759 single-format-standard wp-custom-logo wp-embed-responsive group-blog is_chrome ">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSSSW8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><br style="display:none;">
-
-<!-- Google Tag Manager (noscript) --><div class="site" id="page">
-
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="header-logo-area" itemscope itemtype="http://schema.org/WebSite">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 d-none d-lg-block">
-                    <a href="https://www.saleshacker.com/"><img src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/themes/saleshacker-2019/images/sales-hacker-logo-white.png" alt="Sales Hacker - The Largest Community for Modern Sales Professionals. Taking you up and to the right." height="320" width="150" border="0" /></a><br />
-                    <span class="logo-tagline">Up and to the right.</span>
-                </div>
-                <div class="col-lg-10 d-none d-lg-block">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="leading-community-heading">Join the Smartest Community of<br class="d-none d-lg-block" /> <strong>166K+</strong> Modern Sales Professionals</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div>
-                                <span style="color:#ffffff; font-size:12px; font-weight:bold; letter-spacing:1.2px;">Enter Your Email to Get Weekly Sales Insights!</span>
-                            </div>
-                            <span class="">
-                                <form method="POST" target="_blank" action="https://saleshacker.activehosted.com/proc.php" id="_form_3_" class="_form _form_3 _inline-form _inline-style _dark" novalidate>
-                                    <input type="hidden" name="u" value="3" />
-                                    <input type="hidden" name="f" value="3" />
-                                    <input type="hidden" name="s" />
-                                    <input type="hidden" name="c" value="0" />
-                                    <input type="hidden" name="m" value="0" />
-                                    <input type="hidden" name="act" value="sub" />
-                                    <input type="hidden" name="v" value="2" />
-                                    <div class="_form-content">
-                                        <div class="_form_element _field71 _inline-style " >
-                                            <input type="hidden" name="field[71]" value="" />
-                                        </div>
-                                        <div class="_form_element _field68 _inline-style " >
-                                            <input type="hidden" name="field[68]" value="" />
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <div class="col-sm-9">
-                                                <div class="_form_element _x09114354 _inline-style " >
-                                                <div class="_field-wrapper">
-                                                  <input type="text" name="email" placeholder="Enter your email address." class="form-control" required/>
-                                                </div>
-                                                </div>
-                                                <div class="_form_element _field75 _inline-style " >
-                                                <input type="hidden" name="field[75][]" value="~|">
-                                                <div class="_row _checkbox-radio">
-                                                  <input id="field_75Accept Privacy Policy" type="checkbox" name="field[75][]" value="Accept Privacy Policy"  required>
-                                                  <span>
-                                                    <label for="field_75Accept Privacy Policy" class="form-check-label">
-                                                      <span class="header-cta-gdpr">I accept the  <a href="https://www.saleshacker.com/privacy-policy/" target="_blank" style="color:#ffffff;">Sales Hacker Privacy Policy.</a>*</span>
-                                                    </label>
-                                                  </span>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2">
-                                              <div class="_button-wrapper _inline-style">
-                                                <button id="_form_3_submit" class="_submit btn btn-secondary" type="submit">
-                                                  Submit
-                                                </button>
-                                              </div>
-                                            </div>
-                                        </div>
-
-                                          <div class="_clear-element">
-                                          </div>
-                                    </div>
-                                    <div class="_form-thank-you" style="display:none;">
-                                    </div>
-                                </form>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-10 d-none d-lg-block">
-
-                </div>
-                <div class="col-md-12 d-lg-none d-xl-none">
-                        
-
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    
-        <a class="navbar-brand" href="https://www.saleshacker.com/"><img src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/themes/saleshacker-2019/images/sales-hacker-logo-white.png" alt="Sales Hacker - The Largest Community for Modern Sales Professionals. Taking you up and to the right." height="320" width="150" border="0" /><br />
-        <span class="logo-tagline">Up and to the right.</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <div class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <div class="rwld-nav text-center">
-                <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/read/">Read</a>
-                </div>
-                <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/watch/">Watch</a>
-                </div>
-                <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/listen/">Listen</a>
-                </div>
-                <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/download/">Download</a>
-                </div>
-            </div>
-
-            <div class="nav-search d-none d-md-block">
-                
-<form method="get" id="searchform" action="https://www.saleshacker.com/" role="search">
-	<label class="sr-only" for="s">Search</label>
-	<div class="input-group">
-		<input class="field form-control" id="s" name="s" type="text"
-			placeholder="Search &hellip;" value="">
-		<span class="input-group">
-			<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"><i class="fa fa-search"></i> &nbsp; Search</button>
-		</span>
-	</div>
-</form>
-            </div>
-
-            <div class="sales-nav text-center">
-                <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/sales-templates/">Sales Templates</a>
-                </div>
-                <div class="clearfix">
-                    <!--<a class="nav-link float-lg-left" href="https://www.saleshacker.com/sales-training/">Sales Training</a>-->
-                    <a class="nav-link float-lg-left" href="https://www.saleshacker.com/consulting-and-training">Sales Training</a>
-                </div>
-                <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/sales-saas/">Sales SAAS</a>
-                </div>
-            </div>
-
-
-
-            <div class="category-nav text-center">
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/career-development/">Career Development</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/diversity-and-inclusion/">Diversity/Inclusion</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/industry-insights/">Industry Insights</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-development/">Sales Development</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-enablement/">Sales Enablement</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-engagement/">Sales Engagement</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-management/">Sales Management</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-operations/">Sales Operations</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-process/">Sales Process</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-psychology/">Sales Psychology</a>
-                </div>    
-                            <div class="clearfix">
-                    <a class="nav-link" href="https://www.saleshacker.com/category/sales-technology/">Sales Technology</a>
-                </div>    
-                        </div>
-        </div>
-    </div>
-</nav>                </div>
-            </div>
-        </div>
-	</div><!-- #header-logo-area end -->
-
-    <!-- Angled Top Section, end is in Footer. -->
-    <div class="bg-primary-angled">
-
-
-<div class="" id="single-wrapper">
-
-    <div class="container" id="content" tabindex="-1">
-        <div class="row">
-            <div class="col-lg-2 order-last order-lg-2 ">
-                
-<div class="rwld-nav text-center">
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/read/">Read</a>
-    </div>
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/watch/">Watch</a>
-    </div>
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/listen/">Listen</a>
-    </div>
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/download/">Download</a>
-    </div>
-</div>
-
-<div class="nav-search d-none d-lg-block">
-    
-<form method="get" id="searchform" action="https://www.saleshacker.com/" role="search">
-	<label class="sr-only" for="s">Search</label>
-	<div class="input-group">
-		<input class="field form-control" id="s" name="s" type="text"
-			placeholder="Search &hellip;" value="">
-		<span class="input-group">
-			<button class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"><i class="fa fa-search"></i> &nbsp; Search</button>
-		</span>
-	</div>
-</form>
-</div>
-
-<div class="sales-nav text-center">
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/sales-templates/">Sales Templates</a>
-    </div>
-    <div class="clearfix">
-        <!--<a class="nav-link float-lg-left" href="https://www.saleshacker.com/sales-training/">Sales Training</a>-->
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/consulting-and-training">Sales Training</a>
-    </div>
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/sales-saas/">Sales SAAS</a>
-    </div>
-</div>
-
-<div class="sidebar-nav-seperator d-none d-lg-block">
-</div>
-
-<div class="category-nav text-center">
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/career-development/">Career Development</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/diversity-and-inclusion/">Diversity/Inclusion</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/industry-insights/">Industry Insights</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-development/">Sales Development</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-enablement/">Sales Enablement</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-engagement/">Sales Engagement</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-management/">Sales Management</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-operations/">Sales Operations</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-process/">Sales Process</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-psychology/">Sales Psychology</a>
-    </div>    
-    <div class="clearfix">
-        <a class="nav-link float-lg-left" href="https://www.saleshacker.com/category/sales-technology/">Sales Technology</a>
-    </div>    
-</div>            </div>
-            <div class="col-lg-10 order-first order-lg-10">
-                <div class="row">
-                    <div class="col-lg-9" id="sh-post-content">
-                        <main class="site-main" id="main">
-
-                            
-                                
-<article class="post-10759 post type-post status-publish format-standard has-post-thumbnail hentry category-lead-generation category-sales-enablement tag-articles" id="post-10759">
-
-	<header class="entry-header">
-
-		<h1 class="entry-title">Lead Generation Landing Page: 10 Steps to a High-Conversion Page</h1>
-		<div class="entry-meta">
-
-			<i class="fa fa-caret-up author-caret"></i><span class="author-name"><a href="https://www.saleshacker.com/author/brandon-weaver/">Brandon Weaver</a></span><span class="publish-date">08/26/19</span>		</div><!-- .entry-meta -->
-
-	</header><!-- .entry-header -->
-
-	<img width="640" height="338" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400-1024x541.jpg" class="attachment-large size-large wp-post-image" alt="lead gen landing page" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400-1024x541.jpg 1024w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400-300x159.jpg 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400-768x406.jpg 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-1400.jpg 1400w" sizes="(max-width: 640px) 100vw, 640px" />    <div class="entry-categories-parent">
-        <div class="entry-categories">
-            <span class="cat-link"><a href="https://www.saleshacker.com/category/lead-generation/">Lead Generation</a></span><span class="cat-link"><a href="https://www.saleshacker.com/category/sales-enablement/">Sales Enablement</a></span>        </div>
-    </div>
-    
-	<div class="entry-content">
-
-		<p class="c8"><span class="c3"><strong>“Just Google it.”</strong> Today, the first stage in any purchase is a Google search.</span></p>
-<p class="c8"><span class="c3">And B2B buyers are no different. In fact, most won&#8217;t talk to a salesperson until they&#8217;re nearing the final stages of the buying journey:</span></p>
-<ul>
-<li class="c8"><span class="c3 c7"><a class="c1" href="http://www.marketingcharts.com/online/b2b-buyers-increasingly-researching-making-purchases-online-47045/" target="_blank" rel="noopener noreferrer">94 percent of B2B buyers perform online research</a></span><span class="c3"> before making a purchas</span><span class="c2">ing decision. </span></li>
-<li class="c8"><span class="c2"><a href="http://e61c88871f1fbaa6388d-c1e3bb10b0333d7ff7aa972d61f8c669.r29.cf1.rackcdn.com/DGR_DG081_SURV_B2BBuyers_Jun_2018_Final.pdf?mkt_tok=eyJpIjoiTVdKak5URTNPV1E1TkRkaSIsInQiOiJVZWhyS0EwOVMwK2hJd2xkWnREakFTM3NVM2ptNloyMTRienJUM3J5Wk1KSndPM1wvbnpzTlM2YTF5YkRUSzhcL0lPeUtJSWVrRWJJaFFiOVwvbDFkZkhJT01mS2N3WTBSWmhRVk9yTWNBT1czR2x4aG56ZnNrR1NGYnYza3dpclJPYyJ9" target="_blank" rel="noopener noreferrer">45% of buyers are spending more time on research</a> before making a purchase.</span></li>
+<li class='locales-link'>
+<a data-jq-dropdown=".locales-dropdown" href="#">Русский
+<b class='caret'></b>
+</a><div class='locales-dropdown jq-dropdown'>
+<ul class='jq-dropdown-menu'>
+<li><a href="/de/">Deutsch</a></li>
+<li><a href="/en/">English</a></li>
+<li><a href="/zh/">中文</a></li>
+<li><a href="/fr/">Français</a></li>
+<li><a href="/es/">Español</a></li>
+<li><a href="/it/">Italiano</a></li>
+<li><a href="/ar/">العربية</a></li>
+<li><a href="/ja/">日本語</a></li>
 </ul>
-<p class="c8">The only way to get into the early stages of the buying journey is to create lead generation landing pages that are targeted to your ideal customers and optimized for search.</p>
-<p class="c8">And fortunately, it&#8217;s easier than you might think. Keep reading to learn:</p>
-<ul>
-<li>What is a lead generation landing page?</li>
-<li>How to create a lead generation landing page (with examples)</li>
-<li>Some landing page tips to help you optimize conversions</li>
+</div>
+</li>
 </ul>
-<p class="c8">Let&#8217;s get started.</p>
-<h2>What Is a Lead Generation Landing Page?</h2>
-<p>&nbsp;</p>
-<div style="border: 5px solid #2c4267; padding: 20px; text-align: center;">A <strong>lead generation landing page</strong> is a web page designed specifically to attract people who are in the market for your product or service and gather their contact information to fill your sales pipeline.</div>
-<p>To achieve this goal, a lead generation landing page offers useful information, available free when the visitor fills out a conversion form. What type of information works well at <a href="https://www.saleshacker.com/lead-generation-guide/" target="_blank" rel="noopener noreferrer">generating leads</a>? Think:</p>
-<ul>
-<li>Webinars</li>
-<li>White papers</li>
-<li>Reports</li>
-<li>Ebooks</li>
-<li>Case studies</li>
-<li>Checklists</li>
-<li>Buying guides</li>
-<li>Yes, even a demo</li>
-</ul>
-<p><strong>Why is this important?</strong> To boost your close rates, you need a full pipeline. The easiest way to keep the pipeline full is to automate lead generation, so sales reps can focus on qualifying leads and selling. An effective landing page is a powerful tool for generating qualified leads for your sales pipeline.</p>
-<h2 class="c8">How to Build a Lead Generation Landing Page</h2>
-<p class="c8"><span class="c3">The best lead generation landing pages use elements like </span><span class="c3 c7"><a class="c1" href="https://instapage.com/blog/best-sales-page-examples-to-follow" target="_blank" rel="noopener noreferrer">eye-catching headlines, compelling copy, and CTAs</a></span><span class="c3"> to persuade prospects to convert on the offer.</span></p>
-<p><em><strong>RELATED: <a href="https://www.saleshacker.com/customer-landing-page-email/" target="_blank" rel="noopener noreferrer">Custom Landing Pages: The Unlikely Answer to Low Email Lead Conversion</a></strong></em></p>
-<p class="c8"><span class="c3">So what’s the key to creating an effective lead generation page? Here&#8217;s the 10-step process for building a high-conversion landing page.</span></p>
-<h2 class="c8"><span class="c3">1. </span><span class="c5 c0">Headline</span></h2>
-<p class="c8"><span class="c3">Lead gen pages</span><span class="c3"> </span><span class="c3">must have a headline tha</span><span class="c3">t conveys the benefits of the offer. Two headline formats that are particularly good at this are <em>action</em> headlines and <em>number</em> headlines. </span></p>
-<p class="c8"><span class="c3">Action headlines push visitors to take a specific action. In other words, the headline includes an action word, telling people what they&#8217;ll achieve if they download your information.</span></p>
-<p class="c8"><span class="c3">N</span><span class="c3">umber headlines put a numerical value on the offer</span><span class="c2"> or feature a statistic to catch people’s attention. The majority of visitors will read the headline but only skim through the copy.</span></p>
-<p class="c8"><span class="c3">Here’s an example of a strong headline from a </span><span class="c3 c7"><a class="c1" href="https://www2.fireeye.com/PPC-protecting-your-data.html" target="_blank" rel="nofollow noopener noreferrer">FireEye landing page</a></span><strong><span class="c3">:</span></strong></p>
-<p><img class="alignnone size-full wp-image-20961" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline.png" alt="lead generation landing page headline" width="1215" height="781" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline.png 1215w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline-300x193.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline-768x494.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline-1024x658.png 1024w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline-64x40.png 64w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-headline-1200x771.png 1200w" sizes="(max-width: 1215px) 100vw, 1215px" /></p>
-<h2 class="c8"><span class="c3">2. </span><span class="c5 c0">Header without navigation</span></h2>
-<p class="c8"><span class="c3">Have you ever walked into a store and been so overwhelmed with options that you didn’t end up buying anything? </span></p>
-<p class="c8"><span class="c3">W</span><span class="c3">ebsites require a navigation menu because they want to keep you on the site, exploring your pages. For lead generation pages, menu options give visitors an easy chance to leave the page without converting.</span></p>
-<p>So remove the navigation from your landing pages. Remove the sidebar too. On a landing page, there should be just one action a visitor can make, and that&#8217;s to convert.</p>
-<p class="c8"><span class="c3">Here is a </span><span class="c3 c7"><a class="c1" href="https://forms.netsuite.com/app/site/crm/externalleadpage.nl?compid=NLCORP&amp;formid=6074&amp;h=AACffht_SXMt9uAv6VpwmC3Gzd3p1N7WMm4&amp;redirect_count=1&amp;did_javascript_redirect=T" target="_blank" rel="nofollow noopener noreferrer">good example from Netsuite</a></span><span class="c2">:</span></p>
-<p><img class="alignnone size-full wp-image-20962" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-without-navigation.png" alt="Lead generation landing page without navigation" width="950" height="643" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-without-navigation.png 950w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-without-navigation-300x203.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-without-navigation-768x520.png 768w" sizes="(max-width: 950px) 100vw, 950px" /></p>
-<h2 class="c8"><span class="c0">3. Relevant</span><span class="c3"> </span><span class="c0">i</span><span class="c0 c5">mages</span></h2>
-<p class="c8"><span class="c3 c7"><a class="c1" href="https://blog.hubspot.com/marketing/visual-content-marketing-strategy#sm.0000evh9p01mqd8xuxz1r75fbx7m5" target="_blank" rel="nofollow noopener noreferrer">65% of people retain information paired with relevant images</a></span><span class="c3"> — compared with just 10% of people who only hear the information. </span><span class="c2">With that in mind, it’s best to provide an image that highlights someone using your product or service, or shows what the visitor will receive if they convert on the page.</span></p>
-<p class="c8"><span class="c3">In this </span><span class="c3 c7"><a class="c1" href="https://go.oracle.com/LP=43648" target="_blank" rel="nofollow noopener noreferrer">Oracle example</a></span><span class="c3">, </span><span class="c3">the image compliments the rest of the landing page because the man is presumably using Oracle’s sales cloud software. </span></p>
-<p class="c8"><span class="c3">Also, notice that his eye gaze is looking down toward the “Get Started” call-to-action button and the email capture field. This is known as a visual cue and subtly implies that visitors should enter their email and register for a live demo:</span><span class="c3"> </span></p>
-<p><img class="alignnone size-full wp-image-20963" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-image.png" alt="Lead generation landing page image" width="967" height="740" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-image.png 967w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-image-300x230.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-image-768x588.png 768w" sizes="(max-width: 967px) 100vw, 967px" /></p>
-<h2 class="c8"><span class="c3">4. </span><span class="c5 c0">Copy</span></h2>
-<p class="c8"><span class="c3">Most visitors are looking for copy they can</span><span class="c3"> skim</span><span class="c3">, not read in full, so large paragraphs of text should be avoided at all costs. Keep your landing page copy short and use bullet points </span><span class="c3">whenever appropriate.</span><span class="c2"> </span></p>
-<p class="c8"><span class="c2">Not only will bullet points keep your copy to a minimum, they also draw attention as visitors are skimming your page and evaluating your offer.</span></p>
-<p class="c8"><span class="c3">Take </span><span class="c3 c7"><a class="c1" href="http://www2.pardot.com/sem/us/lead-scoring" target="_blank" rel="nofollow noopener noreferrer">Pardot’s landing page</a></span><span class="c3"> for example, and how they make good use of bullet points:</span></p>
-<p><img class="alignnone size-full wp-image-20964" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-copy.png" alt="Lead generation landing page copy" width="1096" height="761" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-copy.png 1096w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-copy-300x208.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-copy-768x533.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-copy-1024x711.png 1024w" sizes="(max-width: 1096px) 100vw, 1096px" /></p>
-<h2 class="c8"><span class="c3">5. </span><span class="c0">Form</span></h2>
-<p class="c8"><span class="c2">That high school science project that you designed poorly didn’t get you an “A.” So why would a poorly designed lead capture form capture qualified prospects?</span></p>
-<p class="c8"><span class="c3">Prospects don’t want to spend a lot of time inputting personal information before they can claim the offer. One case study proved that removing a single form field </span><span class="c3 c7"><a class="c1" href="https://www.quicksprout.com/2013/01/31/how-to-optimize-contact-forms-for-conversions/" target="_blank" rel="noopener noreferrer">can boost conversions 26%</a></span><span class="c3">.</span><span class="c2"> The less information you require, the more likely you will get a conversion.</span></p>
-<p class="c8"><span class="c3">Here’s an example of a </span><span class="c3 c7"><a class="c1" href="https://www.zoho.com/crm/lp/free-crm.html" target="_blank" rel="nofollow noopener noreferrer">short form from Zoho</a></span><span class="c3"> — only requiring three fields — increasing the likelihood of conversion. What’s more, their CTA button contrasts with the white form and dark blue background, which draws visitors’ attention:</span></p>
-<p><img class="alignnone size-full wp-image-20965" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-form.png" alt="Lead generation landing page form" width="974" height="654" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-form.png 974w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-form-300x201.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-form-768x516.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-form-272x182.png 272w" sizes="(max-width: 974px) 100vw, 974px" /></p>
-<h2 class="c8"><span class="c3">6. </span><span class="c0">CTA</span></h2>
-<p class="c8"><span class="c3">The call-to-action button (CTA) is the most important element on a lead generation landing page because it’s how you generate a new lead.</span></p>
-<p class="c8"><span class="c3">Without the button, you’re wasting your time. Consolidated Label experienced that when they performed an A/B test with the original version omitting the CTA button. </span></p>
-<p class="c8"><span class="c3">Once they created a new landing page variation, they </span><span class="c3 c7"><a class="c1" href="https://vwo.com/blog/cta-button-increases-conversions/" target="_blank" rel="noopener noreferrer">produced 62 percent more conversions</a></span><span class="c2"><strong> </strong>than the original variation.</span></p>
-<p class="c8"><span class="c3">V</span><span class="c3 c10 c6">isitors need to feel compelled to click on the CTA button. Convince them. After all, it&#8217;s the simple push of a button that stands between you and that lead added to your funnel</span><span class="c3">.</span><span class="c2"> </span></p>
-<p class="c8"><span class="c2">Avoid bland copy such as <strong>“Submit” or “Finish”</strong> in favor of personalized copy like <strong>“Send Me the Ebook.”</strong> Make it clear what prospects will receive. </span></p>
-<p class="c8"><span class="c2">The CTA color should contrast with the surrounding elements as well to draw maximum attention (see Zoho example above).</span></p>
-<p class="c8"><span class="c3">The </span><span class="c3 c7"><a class="c1" href="https://products.hoovers.com/dnbhoovers/marketer/" target="_blank" rel="nofollow noopener noreferrer">D&amp;B Hoovers landing page</a></span><span class="c3"> below uses “Get My Free Trial,” which personalizes the offer for the prospect:</span></p>
-<p><img class="alignnone size-full wp-image-20966" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-cta.png" alt="Lead generation landing page cta" width="1233" height="1068" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-cta.png 1233w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-cta-300x260.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-cta-768x665.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-cta-1024x887.png 1024w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-cta-1200x1039.png 1200w" sizes="(max-width: 1233px) 100vw, 1233px" /></p>
-<h2 class="c8"><span class="c3">7. </span><span class="c5 c0">Trust Badges</span></h2>
-<p class="c8"><span class="c3">Trust badges are symbols or icons that highlight the credibility and legitimacy of the company’s brand. </span><span class="c3 c10 c6">Many types of trust badges can be used to validate their product like industry awards, security seals, and customer logos</span><span class="c3">.</span></p>
-<p class="c8"><span class="c3">For example, a </span><span class="c3 c7"><a class="c1" href="https://www.crazyegg.com/blog/trust-seal-ecommerce/" target="_blank" rel="noopener noreferrer">survey from Econsultancy/Toluna </a></span><span class="c3">showed trust badges significantly increase the perceived trustworthiness of a brand, and brands that prospects trust are more likely to get conversions. </span></p>
-<p class="c8"><span class="c3">On the landing page below, </span><span class="c3 c7"><a class="c1" href="http://global.qlik.com/us/landing/go-sm/resources/leader-gartner-magic-quadrant-2017" target="_blank" rel="nofollow noopener noreferrer">Qlik uses customer logos</a></span><span class="c3"> to showcase the major brands </span><span class="c3">they work with</span><span class="c3">, which makes them appear more credible:</span></p>
-<p><img class="alignnone size-full wp-image-20967" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-trust-badges.jpg" alt="Lead generation landing page trust badges" width="968" height="1279" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-trust-badges.jpg 968w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-trust-badges-227x300.jpg 227w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-trust-badges-768x1015.jpg 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-trust-badges-775x1024.jpg 775w" sizes="(max-width: 968px) 100vw, 968px" /></p>
-<h2 class="c8"><span class="c3">8. </span><span class="c0">Social Proof</span></h2>
-<p class="c8"><span class="c3">Customer reviews, testimonials, and case studies are <a href="https://www.saleshacker.com/how-can-sales-drive-customer-success/" target="_blank" rel="noopener noreferrer">social proof to potential leads</a> that others have had a positive experience with your company</span><span class="c3">.</span><span class="c2"> What better way to show prospects you stand behind your product than to have current customers speak on your behalf?</span></p>
-<p class="c8"><span class="c3 c7">Lead Forensics demonstrates this well</span><span class="c2"> with their customer testimonial:</span></p>
-<p><img class="alignnone size-full wp-image-20968" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial.jpg" alt="Lead generation landing page testimonial" width="1226" height="748" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial.jpg 1226w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial-300x183.jpg 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial-768x469.jpg 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial-1024x625.jpg 1024w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial-64x40.jpg 64w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-testimonial-1200x732.jpg 1200w" sizes="(max-width: 1226px) 100vw, 1226px" /></p>
-<h2 class="c8"><span class="c3">9. </span><span class="c0">Privacy Policy</span><span class="c5 c0"> </span></h2>
-<p class="c8"><span class="c3">People want reassurance that their personal data won’t be misused after they complete a form — and regulations require it. Make sure you comply with <a href="https://eugdpr.org" target="_blank" rel="noopener noreferrer">GDPR</a> and <a href="https://www.caprivacy.org/">CCPA</a> by including </span><span class="c3">a privacy policy on the page.</span><span class="c3"> </span></p>
-<p class="c8"><span class="c3">The </span><span class="c3 c7"><a class="c1" href="http://sbs-enterprise.aiprx.spectrum.com/landing/2017/ga/leadgen-online.html" target="_blank" rel="nofollow noopener noreferrer">Spectrum landing page below</a></span><span class="c3"> incorporates a privacy policy link in the footer, which opens a new tab — taking visitors away from the offer. The only recommendation would be to have the link open in a pop-up instead of a new tab.</span><span class="c2"> </span></p>
-<p><img class="alignnone size-full wp-image-20969" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-privacy-policy.png" alt="Lead generation landing page privacy policy" width="1186" height="681" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-privacy-policy.png 1186w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-privacy-policy-300x172.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-privacy-policy-768x441.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-privacy-policy-1024x588.png 1024w" sizes="(max-width: 1186px) 100vw, 1186px" /></p>
-<h2 class="c8"><span class="c3">10. </span><span class="c0">Thank You Page</span></h2>
-<p class="c8"><span class="c2">Thank you pages are an underrated component of lead generation campaigns. These pages should appear after a visitor claims the offer and let visitors know where they can receive the offer.</span></p>
-<p class="c8"><span class="c3">In the </span><span class="c3 c7"><a class="c1" href="https://www.salesforce.com/form/conf/pardot-guided-tour.jsp" target="_blank" rel="nofollow noopener noreferrer">Salesforce example</a></span><span class="c3 c7"><a class="c1" href="https://www.salesforce.com/form/conf/pardot-guided-tour.jsp" target="_blank" rel="nofollow noopener noreferrer"> below</a></span><span class="c2">, the “Start Tour” button lets visitors take the next step immediately. Another best practice for thank you pages is to direct visitors to check out additional company resources.  </span></p>
-<p><img class="alignnone size-full wp-image-20970" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-thank-you.png" alt="Lead generation landing page thank you" width="1326" height="564" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-thank-you.png 1326w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-thank-you-300x128.png 300w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-thank-you-768x327.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-thank-you-1024x436.png 1024w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/lead-generation-landing-page-thank-you-1200x510.png 1200w" sizes="(max-width: 1326px) 100vw, 1326px" /></p>
-<h2>Putting It All Together</h2>
-<p>This landing page by Salesforce is a good example of how to include all these best practices on one page.</p>
-<p><img class="aligncenter size-full wp-image-536512" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/Screen-Shot-2019-08-26-at-2.02.50-PM-1.png" alt="lead generation landing page" width="1068" height="2916" srcset="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/Screen-Shot-2019-08-26-at-2.02.50-PM-1.png 1068w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/Screen-Shot-2019-08-26-at-2.02.50-PM-1-110x300.png 110w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/Screen-Shot-2019-08-26-at-2.02.50-PM-1-768x2097.png 768w, https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/Screen-Shot-2019-08-26-at-2.02.50-PM-1-375x1024.png 375w" sizes="(max-width: 1068px) 100vw, 1068px" /></p>
-<p><strong>What it does right</strong></p>
-<ul>
-<li>The benefits-oriented headline tells people exactly what Salesforce can do for them.</li>
-<li>There are no distractions: no navigation, no links, no sidebar.</li>
-<li>The layout is clean and clear, with plenty of white space. Images don&#8217;t just illustrate. They add insight, supporting and expanding on the copy.</li>
-<li>The copy is short and to-the-point. Notice the bullets, which make this page easy to scan. Notice also that they put the most important information above the fold. If you&#8217;re interested, you can fill out the form right away. But if you want more information, you can scroll down for more compelling reasons to register.</li>
-<li>The form is on the long side, but if you&#8217;ve downloaded anything from them before, the fields are auto-populated, so all you have to do is click the button.</li>
-<li>There&#8217;s just one CTA: Watch the demo. That said, if you want to talk to a person, you can. A secondary CTA takes you directly to a sales rep.</li>
-<li>Trust signals are done very well. Above the final button is a client logo cluster. Below it are two reputable trust emblems.</li>
-<li>The privacy policy is clear and easy to see (without being obtrusive). Notice the disclosure statement just above the button in the form. Salesforce tells users that by registering, they&#8217;re subscribing. And if there&#8217;s any doubt, they include a link to their privacy statement.</li>
-</ul>
-<h2 class="c8"><span class="c5 c0">7 Tips for High-Powered Landing Pages </span></h2>
-<p class="c8"><span class="c3 c7"><a class="c1" href="https://instapage.com/what-is-a-landing-page" target="_blank" rel="noopener noreferrer">Dedicated landing pages</a></span><span class="c3"> are the perfect way to make a lasting first impression with potential customers. </span><span class="c3 c10 c6">T</span><span class="c3 c6 c9">hey&#8217;re designed with a single objective, whether that&#8217;s to promote a new eBook, white paper, register people for a webinar, offer a free demo, etc.</span></p>
-<p>To get the most from your landing pages (and drive a significant number of leads), follow these lead generation landing page tips:</p>
-<p><strong>1. Be 100% relevant.</strong></p>
-<p>Your offer needs to be something your audience is actively looking for: information, a solution, a process. Your landing page isn&#8217;t there to convince people they have a need. It&#8217;s there for people who <em>know</em> they have a need — and it gives them exactly what they&#8217;re looking for.</p>
-<p><strong>2. One purpose, one call to action.</strong></p>
-<p class="c8"><span class="c3 c6 c9">Be ruthless about paring down the content on your landing page. To ensure visitors don&#8217;t get distracted and take an action you didn&#8217;t intend, remove navigation, links, and other engagement elements. To ensure they don&#8217;t get bored and click away, keep the copy short and compelling. The bottom line, if it doesn&#8217;t help drive conversions, remove it. </span></p>
-<p><strong>3. Design matters.</strong></p>
-<p>People assess your brand and your product within the first few seconds of arriving on the page. You need to get the design right, so you&#8217;ll inspire trust. <a href="https://www.pagecloud.com/blog/design-impact-on-seo" target="_blank" rel="noopener noreferrer">Design</a> can also impact your ability to rank in organic search, so take as much time optimizing your page layout and design as you do on the copy.</p>
-<p><strong>4. Be hyper-focused on benefits.</strong></p>
-<p><span class="c2">Most prospects read the headline and skim the copy, so a benefit-oriented headline and minimal copy is critical to your landing page’s success. And remember, benefits sell, not features. Be sure to translate every feature into an outcome that your lead is looking for.</span></p>
-<p><strong>5. Reduce friction.</strong></p>
-<p><span class="c3">Create forms with as little friction as possible and design a </span><span class="c3">color contrasting</span><span class="c2"> CTA button.</span></p>
-<p><strong><span class="c2">6. Personalize it.</span></strong></p>
-<p><span class="c2">Make sure the copy is personalized to your target audience. It should speak directly to their questions and what they&#8217;re trying to achieve right now.  </span></p>
-<p><strong>7. Provide social proof.</strong></p>
-<p><span class="c3 c6 c10">Social proof like testimonials and case studies provide credibility, so highlight positive experiences and results strategically to increase conversions</span><span class="c3">.</span></p>
-<h2>True Success</h2>
-<p>Landing pages can keep your pipeline full — you can count on that. But you need to understand: Most landing pages don&#8217;t perform their best the moment they&#8217;re published.</p>
-<p>You need to monitor the landing page&#8217;s performance and tweak different elements to continually improve results.</p>
-<p>Use a heatmap to see how people engage with your page. And use A/B testing to incrementally improve its performance. As you do, little by little, your page will become a lead generating machine!</p>
-<p class="c8"><strong><span class="c3">Has your business </span><span class="c3 c7">defined the </span><a href="https://instapage.com/marketing-dictionary" target="_blank" rel="noopener noreferrer"><span class="c3 c7">persuasive elements</span></a><span class="c3"> you want to use on landing pages</span><span class="c3">? How will you use these elements</span><span class="c3"> to drive leads? Let us know what you decide in the com</span><span class="c3">ments!</span></strong></p>
-<!-- relpost-thumb-wrapper --><div class="relpost-thumb-wrapper"><!-- filter-class --><div class="relpost-thumb-container"><h3>Related posts:</h3><div style="clear: both"></div><div style="clear: both"></div><!-- relpost-block-container --><div class="relpost-block-container"><a class="relpost-block-single" href="https://www.saleshacker.com/16-sales-hacks-you-should-know-from-past-sales-hacker-events/"><div style="width: 150px; height: 225px;"><div class="relpost-block-single-image" alt="Shortcut to success image"  style=" background: transparent url(https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2014/09/shutterstock_747136135-150x150.png) no-repeat scroll 0% 0%; width: 150px; height: 150px; "></div><div class="relpost-block-single-text"  style="font-family: Nudista;  font-size: 12px;  color: #333333;">16 Sales Hacks You Should Know From Past Sales Hacker Events</div></div></a><a class="relpost-block-single" href="https://www.saleshacker.com/webinar-how-to-increase-win-rate-2x/"><div style="width: 150px; height: 225px;"><div class="relpost-block-single-image" alt="Sales Hacker Webinar - How to Increase Your Win Rate 2X with a Buyer-Aligned Sales Strategy"  style=" background: transparent url(https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/Membrain-1128-SH-CTA-1500x786-on-demand-150x150.png) no-repeat scroll 0% 0%; width: 150px; height: 150px; "></div><div class="relpost-block-single-text"  style="font-family: Nudista;  font-size: 12px;  color: #333333;">How to Increase Your Win Rate 2X with a Buyer-Aligned Sales Strategy</div></div></a><a class="relpost-block-single" href="https://www.saleshacker.com/embracing-technology-sales-now/"><div style="width: 150px; height: 225px;"><div class="relpost-block-single-image" alt="Why Now?"  style=" background: transparent url(https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2015/01/WhyNow_750x393_new-150x150.png) no-repeat scroll 0% 0%; width: 150px; height: 150px; "></div><div class="relpost-block-single-text"  style="font-family: Nudista;  font-size: 12px;  color: #333333;">Embracing Technology in Sales - Why Now?</div></div></a><a class="relpost-block-single" href="https://www.saleshacker.com/tips-tactics-crushing-2017-sales-goals/"><div style="width: 150px; height: 225px;"><div class="relpost-block-single-image" alt="Achieving Sales Goals"  style=" background: transparent url(https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/20170202_Target-01-150x150.png) no-repeat scroll 0% 0%; width: 150px; height: 150px; "></div><div class="relpost-block-single-text"  style="font-family: Nudista;  font-size: 12px;  color: #333333;">Tips and Tactics for Crushing your Annual Sales Goals</div></div></a></div><!-- close relpost-block-container --><div style="clear: both"></div></div><!-- close filter class --></div><!-- close relpost-thumb-wrapper -->
-		        
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-                        <div class="sh-author-box-parent">
-                    <div class="sh-author-box">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <img src="https://secure.gravatar.com/avatar/b1b52be7dde7a42ed570cbf15c4de0f3?s=200&d=mm&r=g" height="200" width="200" />
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="sh-author-box-name">
-                                    <a href="https://www.saleshacker.com/author/brandon-weaver/">Brandon Weaver</a>
-                                </div>
-                                <div class="sh-author-box-description">
-                                    <p>Brandon Weaver is the Director of Content at <a href="https://instapage.com/blog">Instapage</a>, the world's most customizable and designer-friendly landing page solution. He writes about landing pages, marketing, and has a healthy obsession with the Golden State Warriors. Say hey:<br />
-<a href="https://twitter.com/bkweav">@bkweav</a></p>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>	</footer><!-- .entry-footer -->
-
-</article><!-- #post-## -->
-
-                                
-                                
-<div id="disqus_thread"></div>
-
-                            
-                        </main><!-- #main -->
-                    </div>
-                    <div class="col-lg-3" id="sh-sidebar-content">
-                        
-
-<div class="widget-area" id="right-sidebar" role="complementary">
-
-<aside id="ninja_forms_widget-3" class="widget widget_ninja_forms_widget"><noscript class="ninja-forms-noscript-message">
-    Notice: JavaScript is required for this content.</noscript><style>
-
-        /* PLUGIN WIDE STYLES */
-    
-        .nf-form-cont {
-                                    padding:5px;
-                    }
-        .nf-form-fields-required {
-                                    background-color:#f8f9fa;
-                                            padding:5px;
-                    }
-        .nf-response-msg {
-                                    background-color:#f8f9fa;
-                                            padding:5px;
-                    }
-        .nf-form-errors .nf-error-msg {
-                                    background-color:#f8f9fa !important;
-                                            padding:5px !important;
-                    }
-        .nf-form-content .nf-error-wrap .nf-error-msg {
-                                    background-color:#f8f9fa !important;
-                                            padding:5px !important;
-                    }
-    </style><style>
-
-        /* FORM STYLES */
-    
-        #nf-form-5-cont {
-                                    background-color:#4aa9c7;
-                    }
-    </style><style>
-
-        /* FIELDS STYLES */
-    
-        .nf-form-content .nf-field-container #nf-field-41-wrap .nf-field-element .ninja-forms-field {
-                                    color:#ffffff;
-                    }
-        .nf-form-content .nf-field-container #nf-field-38-wrap {
-                                    padding:5px;
-                    }
-        .nf-form-content .nf-field-container #nf-field-38-wrap .nf-field-label label {
-                                    margin:auto;
-                    }
-        .nf-form-content .nf-field-container #nf-field-310-wrap .nf-field-element .ninja-forms-field {
-                                    color:#ffffff;
-                    }
-        .nf-form-content .nf-field-container #nf-field-40-wrap {
-                                    padding:10px;;
-                                                    text-align:center;                    }
-    </style><div id="nf-form-5-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-5" aria-describedby="nf-form-errors-5" role="form">
-
-    <div class="nf-loading-spinner"></div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<!-- HEAD -->
+<div id='head'>
+<div class='content'>
+<a class="mobile-hide" href="/ru" itemprop="url"><img alt="" class="logo" itemprop="logo" src="https://assets.interpreters.travel/assets/logo-c2e780cc39a79c11362fb8c2250c064c.png" />
+<meta content='Interpreters Travel' itemprop='name'>
+</a>
+<div class='slogon_about'>
+<div class='mobile-hide'>Устные переводчики. По всему миру</div>
 
 </div>
-        <!-- TODO: Move to Template File. -->
-        <script>var formDisplay=1;var nfForms=nfForms||[];var form=[];form.id='5';form.settings={"objectType":"Form Setting","editActive":true,"title":"Blog Sidebar CTA","key":"","created_at":"2016-08-24 16:39:20","default_label_pos":"hidden","conditions":[],"show_title":0,"clear_complete":"1","hide_complete":0,"wrapper_class":"","element_class":"","add_submit":"1","logged_in":"","not_logged_in_msg":"","sub_limit_number":"","sub_limit_msg":"","calculations":[],"formContentData":[{"order":1,"cells":[{"order":0,"fields":["html_1499221200207"],"width":"100"}]},{"order":2,"cells":[{"order":0,"fields":["email"],"width":"100"}]},{"order":3,"cells":[{"order":0,"fields":["i_accept_the_less_than_a_href_https_www_saleshacker_com_privacy-policy_target_blank_greater_than_sales_hacker_privacy_policy_less_than_a_greater_than_1528729004607"],"width":"100"}]},{"order":4,"cells":[{"order":0,"fields":["subscribe_1499222205637"],"width":"100"}]},{"order":5,"cells":[{"order":0,"fields":["lead_source"],"width":"100"}]},{"order":6,"cells":[{"order":0,"fields":["ip_address"],"width":"100"}]}],"container_styles_background-color":"#4aa9c7","container_styles_border":"","container_styles_border-style":"","container_styles_border-color":"","container_styles_color":"","container_styles_height":"","container_styles_width":"","container_styles_font-size":"","container_styles_margin":"","container_styles_padding":"","container_styles_display":"","container_styles_float":"","container_styles_show_advanced_css":"0","container_styles_advanced":"","title_styles_background-color":"","title_styles_border":"","title_styles_border-style":"","title_styles_border-color":"","title_styles_color":"","title_styles_height":"","title_styles_width":"","title_styles_font-size":"","title_styles_margin":"","title_styles_padding":"","title_styles_display":"","title_styles_float":"","title_styles_show_advanced_css":"0","title_styles_advanced":"","row_styles_background-color":"","row_styles_border":"","row_styles_border-style":"","row_styles_border-color":"","row_styles_color":"","row_styles_height":"","row_styles_width":"","row_styles_font-size":"","row_styles_margin":"","row_styles_padding":"","row_styles_display":"","row_styles_show_advanced_css":"0","row_styles_advanced":"","row-odd_styles_background-color":"","row-odd_styles_border":"","row-odd_styles_border-style":"","row-odd_styles_border-color":"","row-odd_styles_color":"","row-odd_styles_height":"","row-odd_styles_width":"","row-odd_styles_font-size":"","row-odd_styles_margin":"","row-odd_styles_padding":"","row-odd_styles_display":"","row-odd_styles_show_advanced_css":"0","row-odd_styles_advanced":"","success-msg_styles_background-color":"","success-msg_styles_border":"","success-msg_styles_border-style":"","success-msg_styles_border-color":"","success-msg_styles_color":"","success-msg_styles_height":"","success-msg_styles_width":"","success-msg_styles_font-size":"","success-msg_styles_margin":"","success-msg_styles_padding":"","success-msg_styles_display":"","success-msg_styles_show_advanced_css":"0","success-msg_styles_advanced":"","error_msg_styles_background-color":"","error_msg_styles_border":"","error_msg_styles_border-style":"","error_msg_styles_border-color":"","error_msg_styles_color":"","error_msg_styles_height":"","error_msg_styles_width":"","error_msg_styles_font-size":"","error_msg_styles_margin":"","error_msg_styles_padding":"","error_msg_styles_display":"","error_msg_styles_show_advanced_css":"0","error_msg_styles_advanced":"","changeEmailErrorMsg":"Please enter a valid email address!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","currency":"","drawerDisabled":false,"unique_field_error":"A form with this value has already been submitted.","allow_public_link":0,"embed_form":"","ninjaForms":"Ninja Forms","changeDateErrorMsg":"Please enter a valid date!","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formHoneypot":"If you are a human seeing this field, please leave it empty.","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":false,"thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"currency_symbol":"","beforeForm":"","beforeFields":"","afterFields":"","afterForm":""};form.fields=[{"objectType":"Field","objectDomain":"fields","editActive":false,"order":1,"label":"HTML","type":"html","default":"<br>\n<div style=\"text-align: center; color:#ffffff;\">\n  <div style=\"font-size:20px; font-weight:bold;\">Join Over 166K+ Sales Professionals!<\/div>\n\n\n\n\n\n  <br>\n  <div style=\"font-size:16px; font-weight:normal;\">Get Weekly Newsletters and Exclusive Access to Events Delivered Directly to Your Inbox<\/div>\n\n\n\n\n\n<\/div>","container_class":"","element_class":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_width":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"#ffffff","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","key":"html_1499221200207","cellcid":"c4329","drawerDisabled":false,"id":41,"beforeField":"","afterField":"","value":"<br>\n<div style=\"text-align: center; color:#ffffff;\">\n  <div style=\"font-size:20px; font-weight:bold;\">Join Over 166K+ Sales Professionals!<\/div>\n\n\n\n\n\n  <br>\n  <div style=\"font-size:16px; font-weight:normal;\">Get Weekly Newsletters and Exclusive Access to Events Delivered Directly to Your Inbox<\/div>\n\n\n\n\n\n<\/div>","label_pos":"hidden","parentType":"html","element_templates":["html","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":2,"label":"Email","key":"email","type":"email","created_at":"2016-08-24 16:39:20","label_pos":"hidden","required":1,"placeholder":"Enter your email.","default":"","wrapper_class":"","element_class":"form-control input-lg","container_class":"","admin_label":"","help_text":"","desc_text":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"5px","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"auto","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c4333","drawerDisabled":false,"cellOrder":1,"custom_name_attribute":"email","personally_identifiable":1,"value":"","id":38,"beforeField":"","afterField":"","parentType":"email","element_templates":["email","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":3,"type":"checkbox","label":"I accept the <a href=https:\/\/www.saleshacker.com\/privacy-policy\/ target=\u201d_blank\u201d>Sales Hacker Privacy Policy.<\/a>","key":"i_accept_the_less_than_a_href_https_www_saleshacker_com_privacy-policy_target_blank_greater_than_sales_hacker_privacy_policy_less_than_a_greater_than_1528729004607","label_pos":"right","required":1,"container_class":"","element_class":"","manual_key":false,"admin_label":"","help_text":"","default_value":"unchecked","checked_value":"Checked","unchecked_value":"Unchecked","checked_calc_value":"","unchecked_calc_value":"","wrap_styles_border":"","wrap_styles_width":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"label_styles_border":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_float":"","label_styles_show_advanced_css":0,"element_styles_border":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_float":"","element_styles_show_advanced_css":0,"cellcid":"c4336","drawerDisabled":false,"element_styles_color":"#ffffff","id":310,"beforeField":"","afterField":"","value":"","parentType":"checkbox","element_templates":["checkbox","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":4,"label":"Subscribe","key":"subscribe_1499222205637","type":"submit","created_at":"2016-08-24 16:39:20","processing_label":"Processing","container_class":"","element_class":"btn btn-danger btn-lg","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"10px;","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":1,"wrap_styles_advanced":"text-align:center;","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","submit_element_hover_styles_background-color":"","submit_element_hover_styles_border":"","submit_element_hover_styles_border-style":"","submit_element_hover_styles_border-color":"","submit_element_hover_styles_color":"","submit_element_hover_styles_height":"","submit_element_hover_styles_width":"","submit_element_hover_styles_font-size":"","submit_element_hover_styles_margin":"","submit_element_hover_styles_padding":"","submit_element_hover_styles_display":"","submit_element_hover_styles_float":"","submit_element_hover_styles_show_advanced_css":0,"submit_element_hover_styles_advanced":"","cellcid":"c4339","drawerDisabled":false,"cellOrder":2,"id":40,"beforeField":"","afterField":"","value":"","label_pos":"hidden","parentType":"textbox","element_templates":["submit","button","input"],"old_classname":"","wrap_template":"wrap-no-label"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":5,"type":"hidden","label":"Lead Source","key":"lead_source","default":"{wp:post_url}","admin_label":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_width":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c4342","drawerDisabled":false,"manual_key":true,"id":43,"beforeField":"","afterField":"","value":"https:\/\/www.saleshacker.com\/lead-generation-landing-page-examples-best-practices\/","label_pos":"hidden","parentType":"hidden","element_templates":["hidden","input"],"old_classname":"","wrap_template":"wrap-no-label"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":999,"type":"user-analytics-ip-address","label":"IP Address","key":"ip_address","admin_label":"","wrap_styles_border":"","wrap_styles_width":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"label_styles_border":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_float":"","label_styles_show_advanced_css":0,"element_styles_border":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_float":"","element_styles_show_advanced_css":0,"cellcid":"c4345","drawerDisabled":false,"manual_key":true,"id":337,"beforeField":"","afterField":"","value":"46.211.157.3","label_pos":"hidden","parentType":"user-analytics-ip-address","element_templates":["hidden","wrap-user-analytics","hidden","input"],"old_classname":"","wrap_template":"wrap-user-analytics"}];nfForms.push(form);</script>
-                <script id="nf-tmpl-cell" type="text/template">
-            <nf-fields></nf-fields>
-        </script>
+<div class='clear'></div>
+</div>
+</div>
+<!-- Body -->
+<div class='ru' id='body'>
+<div class='slider_wrapper'>
+<ul class='bxslider' id='main_slider'>
+<li>
+<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_1-44cce294bf2d9e5b82ed8d189e69866e.jpg" />
+<div class='content'>
+<div class='text slaid11'>
+Переводчик на деловой встрече
+<br>
+<span class='slaid12'>в Лос-Анджелесе, США - 3940 руб./3 часа</span>
+</div>
+</div>
+</li>
+<li>
+<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_3-fb8c506400e63025e5acec5459bb0814.jpg" />
+<div class='content'>
+<div class='text slaid21'>
+Переводчик на винной выставке
+<br>
+<span class='slaid22'>Барселона, Испания - 7350 руб./5 часов</span>
+</div>
+</div>
+</li>
+<li>
+<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_4-2c04f3449fc714dc8b26c53fd0fd6297.jpg" />
+<div class='content'>
+<div class='text slaid31'>
+Перевод шепотом на семинаре
+<br>
+<span class='slaid32'>в Гонконге - 6185 руб./2 дня</span>
+</div>
+</div>
+</li>
+<li>
+<img alt="" class="bg" src="https://assets.interpreters.travel/assets/slider/slide_2-afa177de8648fc07a0d133db131a2f6b.jpg" />
+<div class='content'>
+<div class='text slaid41'>
+Перевод на консультации в клинике
+<br>
+<span class='slaid42'>Кельна, Германия - 4202 руб./3 часа</span>
+</div>
+</div>
+</li>
+</ul>
+<div class='content'>
+<div class='find_translator_wrapper'>
+<div class='title'>
+Найти переводчиков
+</div>
+<div class='form_wrapper' id='search_form_wrapper'>
+<form accept-charset="UTF-8" action="/ru/searches" class="simple_form search" id="base_form_search" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="/AQv43cPvcXOmkcIIcUtCkzEhqVylBafevpa2tc5D1g=" /></div>
+<div class='label'>
+<span class='lab'>
+Где:
+</span>
+<span class='error'></span>
 
-        <script id="nf-tmpl-row" type="text/template">
-            <nf-cells></nf-cells>
-        </script>
-
-        </aside><style>.rpwe-block ul{
-list-style: none !important;
-margin-left: 0 !important;
-padding-left: 0 !important;
-}
-
-.rpwe-block li{
-border-bottom: 0px solid #fff;
-margin-bottom: 10px;
-padding-bottom: 10px;
-list-style-type: none;
-}
-
-.rpwe-block a{
-display: inline !important;
-text-decoration: none;
-}
-
-h3.widget-title{
-background: none !important;
-clear: none;
-margin-bottom: 15px !important;
-margin-top: 30px !important;
-font-size: 14px !important;
-font-weight:bold !important;
-}
-
-h3.rpwe-title {
-font-size: 12px !important;
-font-weight:normal !important;
-}
-
-.rpwe-thumb{
-border: 0px solid #eee !important;
-box-shadow: none !important;
-margin: 2px 10px 2px 0;
-padding: 3px !important;
-}
-
-.rpwe-summary{
-font-size: 12px;
-}
-
-.rpwe-time{
-color: #bbb;
-font-size: 11px;
-}
-
-.rpwe-comment{
-color: #bbb;
-font-size: 11px;
-padding-left: 5px;
-}
-
-.rpwe-alignleft{
-display: inline;
-float: left;
-}
-
-.rpwe-alignright{
-display: inline;
-float: right;
-}
-
-.rpwe-aligncenter{
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-.rpwe-clearfix:before,
-.rpwe-clearfix:after{
-content: "";
-display: table !important;
-}
-
-.rpwe-clearfix:after{
-clear: both;
-}
-
-.rpwe-clearfix{
-zoom: 1;
-}
-</style><aside id="rpwe_widget-2" class="widget rpwe_widget recent-posts-extended"><h3 class="widget-title">UPCOMING WEBINARS</h3><div  class="rpwe-block "><ul class="rpwe-ul"><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.saleshacker.com/webinar-proven-framework-massive-pipeline/"  rel="bookmark"><img class="rpwe-aligncenter rpwe-thumb" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/revenue-ops-proven-framework-200x200.png" alt="Revenue Ops: Our Proven Framework for Massive Pipeline"></a><h3 class="rpwe-title"><a href="https://www.saleshacker.com/webinar-proven-framework-massive-pipeline/" title="Permalink to Revenue Ops: Our Proven Framework for Massive Pipeline" rel="bookmark">Revenue Ops: Our Proven Framework for Massive Pipeline</a></h3><time class="rpwe-time published" datetime="2019-12-10T11:00:29-08:00">December 10, 2019</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.saleshacker.com/webinar-data-sales-orchestration/"  rel="bookmark"><img class="rpwe-aligncenter rpwe-thumb" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/1205-ZoomInfo-DiscoverOrg-1200x630-on-demand-2-200x200.png" alt="Find Your “Perfect Pitch”: Using Data as the Maestro of Your Sales Orchestration"></a><h3 class="rpwe-title"><a href="https://www.saleshacker.com/webinar-data-sales-orchestration/" title="Permalink to Find Your “Perfect Pitch”: Using Data as the Maestro of Your Sales Orchestration" rel="bookmark">Find Your “Perfect Pitch”: Using Data as the Maestro of Your Sales Orchestration</a></h3><time class="rpwe-time published" datetime="2019-12-05T11:00:37-08:00">December 5, 2019</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.saleshacker.com/webinar-big-gap-sales-sequences-your-people/"  rel="bookmark"><img class="rpwe-aligncenter rpwe-thumb" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/1203-BombBomb-1200x630-on-demand-2-200x200.png" alt="The Big Gap In Your Sales Sequences: Your People"></a><h3 class="rpwe-title"><a href="https://www.saleshacker.com/webinar-big-gap-sales-sequences-your-people/" title="Permalink to The Big Gap In Your Sales Sequences: Your People" rel="bookmark">The Big Gap In Your Sales Sequences: Your People</a></h3><time class="rpwe-time published" datetime="2019-12-03T11:00:23-08:00">December 3, 2019</time></li></ul></div><!-- Generated by http://wordpress.org/plugins/recent-posts-widget-extended/ --></aside>
-</div><!-- #right-sidebar -->
-                    </div>
-                </div>
-            </div>
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #single-wrapper -->
-
-
-</div> <!-- End Angled Top Section. -->
-<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='90c448ed1102d6ec840490a4e87101e733ba1edf4d117ee0cdc20ae9b5e956d2';j.dataset.sumoPlatform='wordpress';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>    <script type="application/javascript">
-      var ajaxurl = "https://www.saleshacker.com/wp-admin/admin-ajax.php";
-
-      function sumo_add_woocommerce_coupon(code) {
-        jQuery.post(ajaxurl, {
-          action: 'sumo_add_woocommerce_coupon',
-          code: code,
-        });
+<input class='find_translator_city' name='city_name' placeholder='например: Милан, Нью-Йорк, Гонконг' type='text'>
+<input class='hidden' id='search_city_id' name='search[city_id]' type='hidden' value=''>
+<script>
+  var API_BASE_URL = "https://cp.interpreters.travel/api"
+  $(document).on('ready page:load', function(e) {
+      $('.find_translator_city').val("").removeClass('act');
+      var cache = {};
+      function select(event, ui) {
+        $('.find_translator_city').disableInputFor(1000);
+        setTimeout(function() {$('.find_translator_city').val(ui.item.label)}, 500);
+        $('#search_city_id').val(ui.item.value);
+        // reconstruct lang selector
+        // Frontend redirects this request to backend API:
+        $.get("/ru/searches/language_selector",
+               {city_id: ui.item.value, your_language_id: $("#search_your_language_id").val()},
+               function(data) {
+                $('#language_selector').replaceWith(data)
+              }).done(function() {
+                  $(".jq-selectbox__select").addClass('act');
+                  $.get("/ru/searches/your_language_selector",
+                         {city_id: ui.item.value, language_id: $("#search_language_id").val(), your_language_id: $("#search_your_language_id").val()},
+                         function(data) {
+                          $('#your_language_selector').replaceWith(data)
+                        }).done(function() {
+                            $(".jq-selectbox__select").addClass('act');
+                        });
+              });
+        return false;
       }
-
-      function sumo_remove_woocommerce_coupon(code) {
-        jQuery.post(ajaxurl, {
-          action: 'sumo_remove_woocommerce_coupon',
-          code: code,
-        });
-      }
-
-      function sumo_get_woocommerce_cart_subtotal(callback) {
-        jQuery.ajax({
-          method: 'POST',
-          url: ajaxurl,
-          dataType: 'html',
-          data: {
-            action: 'sumo_get_woocommerce_cart_subtotal',
-          },
-          success: function(subtotal) {
-            return callback(null, subtotal);
-          },
-          error: function(err) {
-            return callback(err, 0);
+      cityAjaxIsRunning = false
+      $('.find_translator_city').autocomplete({
+        minLength: 2,
+        delay: 0,
+        source: function(request, response){
+          if(cityAjaxIsRunning) {
+            return;
           }
-        });
-      }
-    </script>
-    
-    <style type="text/css">
+          var term = request.term;
+          if (term in cache){
+            response(cache[term]);
+            return;
+          }
+          cityAjaxIsRunning = true;
+          $.ajax({
+                type: 'GET',
+                url: API_BASE_URL+'/cities?interpreters_search=true&locale=ru',
+                dataType: 'jsonp',
+                crossDomain: true,
+                data: request,
+                success:function(data){
+                  cache[ term ] = data;
+                  item = data[0]
+                  if(item && term.length >= 5) {
+                    console.log("SELECT!")
+                    select('select', {item: item});
+                  }
+                  else if(item) {
+                    // $('.find_translator_city').val(item.label);
+                    // $('#search_city_id').val(item.value);
+                  }
+                  else {
+                    alert('В указанном городе сейчас нет доступных переводчиков. Попробуйте найти переводчика в этом городе позже или выберите другой город');
+                    $('.find_translator_city').val(null);
+                    $('#search_city_id').val(null);
+                    $('#language_selector').html("<div id=\'language_selector\'>\n<select disabled=\"disabled\" id=\"search_language_id\" name=\"search[language_id]\"><option value=\"\">нет переводчиков для этого города<\/option><\/select>\n<script>\n  (function() {\n    $(document).ready(function(e) {\n      $(\"#language_selector select\").styler();\n      return $(\".jq-selectbox__select\").on(\'click\', function(e) {\n        if ($(\'input#search_city_id\').attr(\'value\') === \'\') {\n          return alert(\'Сначала укажите город\');\n        } else {\n          return $(this).addClass(\'act\');\n        }\n      });\n    });\n  \n  }).call(this);\n<\/script>\n<\/div>\n");
+                  }
+                  cityAjaxIsRunning = false
+                  response( data );
+                },
+                error:function(jq, st, error){
+                  alert(error);
+                }
+          });
+  
+        },
+        focus: function(event, ui){
+          $('.find_translator_city').val(ui.item.label);
+          return false;
+        },
+        select: select
+    });
+  });
+</script>
 
-        @media screen and (max-width: 640px) {
+</div>
+<div class='label'>
+<span class='lab'>
+Когда:
+</span>
+<span class='error'></span>
 
-            #wpfront-scroll-top-container {
-                visibility: hidden;
-            }
+<div class='data_wrapper'>
+<div class='full_date_text'>
+выберите дату, время
+</div>
+<div class='data_cloud'>
+<a class='close-me'>&#xd7;</a>
+<div class='datepicker'></div>
+<input class='datepicker_hidden' type='hidden'>
+<div id='intervals'></div>
+<div class='timepicker'>
+<div class='border-wrapper timepicker'>
+<div class='title'>
+Время встречи (местное):
+</div>
+<div class='from'>
+<span class='text date-text-left'>C</span>
+<div class='hour time'>
+<input class='h' type='text' value='10'>
+<div class='ar'>
+<a class='plus'>
+<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
+</a>
+<a class='minus'>
+<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
+</a>
+</div>
+</div>
+<span class='text text2'>:</span>
+<div class='minute time'>
+<input class='min' type='text' value='00'>
+<div class='ar'>
+<a class='plus'>
+<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
+</a>
+<a class='minus'>
+<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
+</a>
+</div>
+</div>
+<span class='text date-text-right'>C</span>
+<div class='clear'></div>
+</div>
+<div class='to'>
+<span class='text date-text-left'>До</span>
+<div class='hour time'>
+<input class='h' type='text' value='18'>
+<div class='ar'>
+<a class='plus'>
+<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
+</a>
+<a class='minus'>
+<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
+</a>
+</div>
+</div>
+<span class='text text2'>:</span>
+<div class='minute time'>
+<input class='min' type='text' value='00'>
+<div class='ar'>
+<a class='plus'>
+<img alt="Timepicker arrows top" src="https://assets.interpreters.travel/assets/timepicker_arrows_top-9270f6a3af99f5f80616dab69de9c04d.png" />
+</a>
+<a class='minus'>
+<img alt="Timepicker arrows bottom" src="https://assets.interpreters.travel/assets/timepicker_arrows_bottom-e94fec0710d3db2c06655db7b24ff3b6.png" />
+</a>
+</div>
+</div>
+<span class='text date-text-right'>До</span>
+<div class='clear'></div>
+</div>
+<div class='buttons'>
+<a class='button' id='add_time'>добавить</a>
+<a class='button' id='clear_time'>очистить</a>
+</div>
+</div>
+<div class='buttons'>
+<a class='button large clear_intervals' data-input-text='выберите дату, время' data-total-text='Общее время интервалов'>
+очистить интервалы
+</a>
+</div>
+</div>
+<pre class='result'>Общее время интервалов</pre>
+<div class='clear'></div>
+<input class='result_hidden' type='hidden'>
+<div class='select_result_wrapper'>
+<a class='select_result'>выбрать</a>
+</div>
+<img alt="Find cloud arrow" class="find_cloud_arrow" src="https://assets.interpreters.travel/assets/find_cloud_arrow-461c6d0bd0ba9d3029499cb76af957fb.png" />
+</div>
+</div>
 
+</div>
+<div class='label'>
+<span class='lab'>
+Какой язык нужен:
+</span>
+<span class='error'></span>
+
+<div id='language_selector'>
+<select disabled="disabled" id="search_language_id" name="search[language_id]"><option value="">выбрать из списка</option></select>
+<script>
+  (function() {
+    $(document).ready(function(e) {
+      $("#language_selector select").styler();
+      return $(".jq-selectbox__select").on('click', function(e) {
+        if ($('input#search_city_id').attr('value') === '') {
+          return alert('Сначала укажите город');
+        } else {
+          return $(this).addClass('act');
         }
+      });
+    });
+  
+  }).call(this);
+</script>
+</div>
 
-    </style>
-
-
-    <div id="wpfront-scroll-top-container">
-        <i class="fa fa-arrow-circle-up fa-5x"></i>    </div>
-    
-    <style type="text/css">
-        #wpfront-scroll-top-container i {
-            color: #023255;
+</div>
+<div class='your_lang'>
+Ваш язык:
+<div id='your_language_selector'>
+<span>русский</span>
+<input class='hidden' id='search_your_language_id' name='search[your_language_id]' type='hidden' value='2'>
+<script>
+  (function() {
+    $(document).ready(function(e) {
+      $("#your_language_selector select").styler();
+      $(".jq-selectbox__select").on('click', function(e) {
+        if ($('input#search_city_id').attr('value') !== '') {
+          return $(this).addClass('act');
         }
-            
-            </style>
-    <script type="text/javascript">function wpfront_scroll_top_init() {if(typeof wpfront_scroll_top == "function" && typeof jQuery !== "undefined") {wpfront_scroll_top({"scroll_offset":100,"button_width":0,"button_height":0,"button_opacity":0.8,"button_fade_duration":200,"scroll_duration":400,"location":1,"marginX":20,"marginY":20,"hide_iframe":false,"auto_hide":false,"auto_hide_after":2,"button_action":"top","button_action_element_selector":"","button_action_container_selector":"html, body","button_action_element_offset":0});} else {setTimeout(wpfront_scroll_top_init, 100);}}wpfront_scroll_top_init();</script><link rel='stylesheet' id='dashicons-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/css/dashicons.min.css?ver=5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='nf-display-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/ninja-forms/assets/css/display-structure.css?ver=5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='nf-layout-front-end-css'  href='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/ninja-forms-style/layouts/assets/css/display-structure.css?ver=3.0.28' type='text/css' media='all' />
-<script type='text/javascript'>
-/* <![CDATA[ */
-var countVars = {"disqusShortname":"saleshacker"};
-/* ]]> */
+      });
+      return $("#search_your_language_id").on("change", function() {
+        return $.get("/ru/searches/language_selector", {
+          city_id: $("#search_city_id").val(),
+          your_language_id: $("#search_your_language_id").val()
+        }, function(data) {
+          return $('#language_selector').replaceWith(data);
+        }).done(function() {
+          return $(".jq-selectbox__select").addClass('act');
+        }, $(".jq-selectbox__select").addClass('act'));
+      });
+    });
+  
+  }).call(this);
 </script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.17"},"disqusIdentifier":"10759 https:\/\/www.saleshacker.com\/?p=10759","disqusShortname":"saleshacker","disqusTitle":"Lead Generation Landing Page: 10 Steps to a High-Conversion Page","disqusUrl":"https:\/\/www.saleshacker.com\/lead-generation-landing-page-examples-best-practices\/","postId":"10759"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.17'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var mPS2id_params = {"instances":{"mPS2id_instance_0":{"selector":"a[rel='m_PageScroll2id']","autoSelectorMenuLinks":"true","excludeSelector":"a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion]","scrollSpeed":1000,"autoScrollSpeed":"true","scrollEasing":"easeInOutQuint","scrollingEasing":"easeOutQuint","pageEndSmoothScroll":"true","stopScrollOnUserAction":"false","autoCorrectScroll":"false","layout":"vertical","offset":0,"dummyOffset":"false","highlightSelector":"","clickedClass":"mPS2id-clicked","targetClass":"mPS2id-target","highlightClass":"mPS2id-highlight","forceSingleHighlight":"false","keepHighlightUntilNext":"false","highlightByNextTarget":"false","appendHash":"false","scrollToHash":"true","scrollToHashForAll":"true","scrollToHashDelay":0,"scrollToHashUseElementData":"true","scrollToHashRemoveUrlHash":"false","disablePluginBelow":0,"adminDisplayWidgetsId":"true","adminTinyMCEbuttons":"true","unbindUnrelatedClickEvents":"false","normalizeAnchorPointTargets":"false"}},"total_instances":"1","shortcode_class":"_ps2id"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=1.6.6'></script>
-<script type="text/javascript" src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/wpfront-scroll-top/js/wpfront-scroll-top.min.js?ver=2.0.2" async="async" defer="defer"></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/themes/saleshacker-2019/js/theme.min.js?ver=0.9.3.1573512522'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/js/comment-reply.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=5.3'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-includes/js/backbone.min.js?ver=1.4.0'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/ninja-forms/assets/js/min/front-end-deps.js?ver=3.4.22'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","formHoneypot":"If you are a human seeing this field, please leave it empty.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"]};
-var nfFrontEnd = {"adminAjax":"https:\/\/www.saleshacker.com\/wp-admin\/admin-ajax.php","ajaxNonce":"f19c1085e1","requireBaseUrl":"https:\/\/www.saleshacker.com\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","user-analytics-browser":"user-analytics-browser","user-analytics-browser-version":"user-analytics-browser-version","user-analytics-city":"user-analytics-city","user-analytics-country":"user-analytics-country","user-analytics-ip-address":"user-analytics-ip-address","user-analytics-latitude":"user-analytics-latitude","user-analytics-longitude":"user-analytics-longitude","user-analytics-os":"user-analytics-os","user-analytics-region":"user-analytics-region","user-analytics-referer":"user-analytics-referer","user-analytics-utm-campaign":"user-analytics-utm-campaign","user-analytics-utm-content":"user-analytics-utm-content","user-analytics-utm-medium":"user-analytics-utm-medium","user-analytics-utm-source":"user-analytics-utm-source","user-analytics-utm-term":"user-analytics-utm-term"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","user-analytics-browser":"user-analytics-browser","user-analytics-browser-version":"user-analytics-browser-version","user-analytics-city":"user-analytics-city","user-analytics-country":"user-analytics-country","user-analytics-ip-address":"user-analytics-ip-address","user-analytics-latitude":"user-analytics-latitude","user-analytics-longitude":"user-analytics-longitude","user-analytics-os":"user-analytics-os","user-analytics-region":"user-analytics-region","user-analytics-referer":"user-analytics-referer","user-analytics-utm-campaign":"user-analytics-utm-campaign","user-analytics-utm-content":"user-analytics-utm-content","user-analytics-utm-medium":"user-analytics-utm-medium","user-analytics-utm-source":"user-analytics-utm-source","user-analytics-utm-term":"user-analytics-utm-term"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","user-analytics-browser":"user-analytics-browser","user-analytics-browser-version":"user-analytics-browser-version","user-analytics-city":"user-analytics-city","user-analytics-country":"user-analytics-country","user-analytics-ip-address":"user-analytics-ip-address","user-analytics-latitude":"user-analytics-latitude","user-analytics-longitude":"user-analytics-longitude","user-analytics-os":"user-analytics-os","user-analytics-region":"user-analytics-region","user-analytics-referer":"user-analytics-referer","user-analytics-utm-campaign":"user-analytics-utm-campaign","user-analytics-utm-content":"user-analytics-utm-content","user-analytics-utm-medium":"user-analytics-utm-medium","user-analytics-utm-source":"user-analytics-utm-source","user-analytics-utm-term":"user-analytics-utm-term"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","user-analytics-browser":"user-analytics-browser","user-analytics-browser-version":"user-analytics-browser-version","user-analytics-city":"user-analytics-city","user-analytics-country":"user-analytics-country","user-analytics-ip-address":"user-analytics-ip-address","user-analytics-latitude":"user-analytics-latitude","user-analytics-longitude":"user-analytics-longitude","user-analytics-os":"user-analytics-os","user-analytics-region":"user-analytics-region","user-analytics-referer":"user-analytics-referer","user-analytics-utm-campaign":"user-analytics-utm-campaign","user-analytics-utm-content":"user-analytics-utm-content","user-analytics-utm-medium":"user-analytics-utm-medium","user-analytics-utm-source":"user-analytics-utm-source","user-analytics-utm-term":"user-analytics-utm-term"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown","user-analytics-browser":"user-analytics-browser","user-analytics-browser-version":"user-analytics-browser-version","user-analytics-city":"user-analytics-city","user-analytics-country":"user-analytics-country","user-analytics-ip-address":"user-analytics-ip-address","user-analytics-latitude":"user-analytics-latitude","user-analytics-longitude":"user-analytics-longitude","user-analytics-os":"user-analytics-os","user-analytics-region":"user-analytics-region","user-analytics-referer":"user-analytics-referer","user-analytics-utm-campaign":"user-analytics-utm-campaign","user-analytics-utm-content":"user-analytics-utm-content","user-analytics-utm-medium":"user-analytics-utm-medium","user-analytics-utm-source":"user-analytics-utm-source","user-analytics-utm-term":"user-analytics-utm-term"}},"opinionated_styles":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/ninja-forms/assets/js/min/front-end.js?ver=3.4.22'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var nfua = {"ajax_url":"https:\/\/www.saleshacker.com\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/ninja-forms-user-analytics/assets/js/user-analytics.js?ver=3.0.020191208191758'></script>
-<script type='text/javascript' src='https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/plugins/ninja-forms-style/layouts/assets/js/min/front-end.js?ver=3.0.28'></script>
-<script id="tmpl-nf-layout" type="text/template">
-	<span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
-		{{{ ( 1 == data.settings.show_title ) ? '<h3>' + data.settings.title + '</h3>' : '' }}}
-	</span>
-	<div class="nf-form-wrap ninja-forms-form-wrap">
-		<div class="nf-response-msg"></div>
-		<div class="nf-debug-msg"></div>
-		<div class="nf-before-form"></div>
-		<div class="nf-form-layout"></div>
-		<div class="nf-after-form"></div>
-	</div>
-</script>
+</div>
 
-<script id="tmpl-nf-empty" type="text/template">
+</div>
+<input class="sub_bot" name="commit" type="submit" value="искать" />
+</form>
+</div>
+<div class='clear'></div>
+</div>
 
+</div>
+<div class='slider_arrows'>
+<a class='prev_arrow'></a>
+<a class='next_arrow'></a>
+</div>
+</div>
+<div class='main_content'>
+<div class='clear'></div>
+<div class='type_trans_wrapper'>
+<h2>Виды услуг устного перевода</h2>
+<div class='text'>Не знаете, какую услугу выбрать? Посмотрите описание услуг устного перевода.</div>
+<div class='type_trans'>
+<a class="type_trans_block" href="/ru/help/services/conversation"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_01-104735214396fa5757f230dad8b85dbd.png" />
+<span class='link'>Перевод на переговорах</span>
+</a><a class="type_trans_block" href="/ru/help/services/presentation"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_02-fbb2cae2cd3bbf6ab15f791a10aa7647.png" />
+<span class='link'>Перевод на презентации</span>
+</a><a class="type_trans_block no_mrg" href="/ru/help/services/protocol_translation"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_03-4c426cbfbd0cad0e51e2c70729515b10.png" />
+<span class='link'>Протокольный перевод</span>
+</a><a class="type_trans_block" href="/ru/help/services/exhibition"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_04-082b00c7bab9a088827f738d58e44874.png" />
+<span class='link'>Перевод на выставке</span>
+</a><a class="type_trans_block" href="/ru/help/services/seminar_conference"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_05-36800c1c8785a3aebb30800cea46e36a.png" />
+<span class='link'>Перевод на семинаре или конференции</span>
+</a><a class="type_trans_block no_mrg" href="/ru/help/services/escort_delegations"><img alt="" class="grayscale" src="https://assets.interpreters.travel/assets/type_img_06-53421460fd5066696b46be7d5bb14163.png" />
+<span class='link'>Сопровождение делегаций</span>
+</a><div class='clear'></div>
+</div>
+<a class="all_link" href="/ru/help/services/conversation">Все услуги устного перевода</a>
+<div class='clear'></div>
+</div>
+<div class='why_inter_wrapper'>
+<h2>Почему interpreters.travel?</h2>
+<div class='why_inter'>
+<div class='why_inter_block'>
+<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_01-eb9772a4fc5ffb25d6386447d5588dcb.png" />
+<a class="name" href="/ru/help/for_clients">Просто и безопасно</a>
+<div class='text'>
+Заказывайте сейчас, платите потом! <br/> БЕСПЛАТНАЯ отмена заказа. <br/> Гарантия безопасности платежей.
+</div>
+</div>
+<div class='why_inter_block no_mrg'>
+<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_02-65edc5432859c839f98b7392023a3bfd.png" />
+<a class="name" href="/ru/help/for_clients">Низкие цены</a>
+<div class='text'>
+Все заказы ПО ЦЕНАМ ПЕРЕВОДЧИКОВ <br/> без агентских наценок. <br/> УЧЕТ СКИДОК в расчете заказа.
+</div>
+</div>
+<div class='why_inter_block'>
+<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_03-2012476a445ecf5f5560bb40412feba5.png" />
+<a class="name" href="/ru/help/for_clients">Максимум выбора</a>
+<div class='text'>
+Переводчики в 4242 городах, <br/> 172 странах по всему миру
+</div>
+</div>
+<div class='why_inter_block no_mrg'>
+<img alt="" class="img" src="https://assets.interpreters.travel/assets/why_img_04-46fbc3dc356592e8df176001a0335577.png" />
+<a class="name" href="/ru/help/for_clients">Удобно</a>
+<div class='text'>
+Удобная оплата: VISA, MasterCard,<br/> банковский перевод, наличные на встрече<br/>ПОДДЕРЖКА 24/7 на русском языке
+</div>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+<p style='color: #696a6e; font: 25px/25px &#39;robotolight&#39;'>Проверенные переводчики и реальные отзывы клиентов</p>
+<div class='client_reviews_slider_wrapper' style='position: relative;'>
+<ul class='bxslider' id='client-reviews-slider' style='padding: 0; margin-top: 5px;'>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;на высшом уровне&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Александр, Украина (8 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Отличная работа и самые приятные впечатления. Высокий профессиональный уровень, эрудиция. Спасибо огромное!&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Олег, &quot;VessVell&quot;, Германия (7 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Профессиональный подход, пунктуальность. Перевод деловой встречи прошел на высоком уровне! &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Кирилл Сибиряков, Украина (7 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Отлично&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Владимир Слепкань, Украина (8 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Спасибо Анастасии. &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Константин, Прага, Чехия (5 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Отличный переводчик и отличный человек. Спасибо большое за сопровождение на выставке и при личных поездках по Тегерану.  &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Евгений, Москва, Россия (3 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Отличная работа, большое спасибо!&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Nataliia Korpuseva, &quot;New Line Group&quot;, Prague, Czech Republic (December 4, 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Работали с Анной на выставке в Корее, все прошло отлично, очень ей благодарны.&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Алина Спиридонова, Воронеж, Россия (17 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Людмила профессионал в своём деле, делает быстрый и четкий перевод. Очень ответственно и профессионально подходит к делу. Такого быстрого перевода нам ещё не кто не делал. Цены доступные для любого закащика. Людмила нам очень помогла и мы ей от всех души блогодарны за Ее чёткий и професеональный подход к Клиенту и к своему делу! Спасибо вам огромное за помощь. &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Наташа, Киль, Германия (3 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Высокий профессионализм &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Ергали, Караганда, Казахстан (1 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Спасибо за работу, коммуникативные качества, профессионализм, пунктуальность, позволили результативно провести  намеченную  встречу. &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Ирина Иовская, Германия (1 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Добрый день!
+Воспользовались услугами перевода у Акмарал в хирургической клинике и остались очень довольны!
+Пунктуальная, ответственная, в идеале владеет турецким, русским и английским языками. Скорость перевода на высочайшем уровне!
+Было очень приятно работать с настоящим профессионалом. Спасибо!
+&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Инна Яковлева, Россия (29 ноября 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Очень довольны работой! Рекомендуем!&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Светлана, Компания &quot;UNICLINICS&quot;, Великобритания (1 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Профессионал своего дела. Спасибо за работу&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Рафаэль, Кыргызстан (1 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Впечатления остались очень хорошие. Блестящий Профессиональный  синхронный перевод! Доброжелательный, ответственный, пунктуальный, интеллигентный человек. Спасибо , Лариса , за помощь, надеемся на будущее сотрудничество&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Алла Артюх, Украина (1 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Все хорошо. Спасибо &raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Екатерина, Компания «Юркас», Минск, Беларусь (29 ноября 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Молодец! Помогла нам в общении на выставке.&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Олег Банин, Компания &quot;Европартнер&quot;, Краснодар, Россия (1 декабря 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Блестящий специалист. Настоящий профессионал. Рекомендую всем!&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Руслан, Москва, Россия (29 ноября 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Евгения — блестящий профессионал. Крайне рекомендуем сотрудничество&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Евгений, Россия (29 ноября 2019)</span>
+</li>
+<li>
+<img alt="" src="https://assets.interpreters.travel/assets/quotes-72e71c06d4b73b62bfef3cd6401b8f5a.png" style="float: left;" />
+<div class='content'>
+<div class='text' style='font: italic 18px/18px &#39;robotobold&#39;; color: #696a6e;margin-left: 120px;'>
+&laquo;Впечатления от качества перевода, коммуникации в трехстороннем взаимодействии и общения в целом превзошли ожидания.&raquo;
+</div>
+</div>
+<div class='clear'></div>
+<br>
+<span style='color: #696a6e; float: right'>Сергей, Компания «АО «СПЕЦКАБЕЛЬ», Санкт-Петербург, Россия (25 ноября 2019)</span>
+</li>
+</ul>
+<div class='client-reviews-arrows'>
+<a class='prev_arrow' style='float: left;'></a>
+<a class='next_arrow' style='float: right;'></a>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<div id='footer'>
+<div class='content'>
+<ul class='footer_menu'>
+<li>
+<a href="/ru/help/info">Об interpreters.travel</a>
+</li>
+<li class='mobile-hide'>
+<a href="/ru/help/support">Поддержка 24/7</a>
+</li>
+<li>
+<a href="/ru/help/help_interpreter">Переводчикам</a>
+</li>
+<li><a href="/ru/help/for_affiliates">Партнерам</a></li>
+<li>
+<a href="/ru/help/terms_conditions">Правила и условия</a>
+</li>
+<li>
+<a href="/ru/help/privacy_policy">Политика конфиденциальности</a>
+</li>
+</ul>
+<div class='copy'>
+<span class='mobile-copy'>&copy; Copyright 2013 - 2019. interpreters.travel. All rights reserved.</span>
+<a class="social-link" href="https://www.facebook.com/interpreters.travel/" target="_blank"><i class='icon-facebook-official icon-social'></i>
+</a><a class="social-link" href="https://www.linkedin.com/company/interpreters-travel/" target="_blank"><i class='icon-linkedin-squared icon-social'></i>
+</a><a class="social-link" href="https://www.youtube.com/channel/UCHdC6jw6SHFbuRXhOjSpLDw" target="_blank"><i class='icon-youtube-play icon-social'></i>
+</a></div>
+</div>
+</div>
+<!-- Yandex.Metrika counter -->
+<script>
+  window.localStorage.setItem("locale", 'ru')
+  
+  var current_user_id = null;
+  
+  if (current_user_id) {
+    window.localStorage.setItem("current_user_id", current_user_id);
+  } else {
+    window.localStorage.removeItem("current_user_id");
+  }
+  
+  (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22175668 = new Ya.Metrika({id:22175668, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
 </script>
-<script id="tmpl-nf-before-form" type="text/template">
-	{{{ data.beforeForm }}}
-</script><script id="tmpl-nf-after-form" type="text/template">
-	{{{ data.afterForm }}}
-</script><script id="tmpl-nf-before-fields" type="text/template">
-    <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}</div>
-    {{{ data.beforeFields }}}
-</script><script id="tmpl-nf-after-fields" type="text/template">
-    {{{ data.afterFields }}}
-    <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert"></div>
-    <div class="nf-form-hp"></div>
-</script>
-<script id="tmpl-nf-before-field" type="text/template">
-    {{{ data.beforeField }}}
-</script><script id="tmpl-nf-after-field" type="text/template">
-    {{{ data.afterField }}}
-</script><script id="tmpl-nf-form-layout" type="text/template">
-	<form>
-		<div>
-			<div class="nf-before-form-content"></div>
-			<div class="nf-form-content {{{ data.element_class }}}"></div>
-			<div class="nf-after-form-content"></div>
-		</div>
-	</form>
-</script><script id="tmpl-nf-form-hp" type="text/template">
-	<label for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
-		{{{ nfi18n.formHoneypot }}}
-		<input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value=""/>
-	</label>
-</script>
-<script id="tmpl-nf-field-layout" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
-        <div class="nf-before-field"></div>
-        <div class="nf-field"></div>
-        <div class="nf-after-field"></div>
-    </div>
-</script>
-<script id="tmpl-nf-field-before" type="text/template">
-    {{{ data.beforeField }}}
-</script><script id="tmpl-nf-field-after" type="text/template">
-    <#
-    /*
-     * Render our input limit section if that setting exists.
-     */
-    #>
-    <div class="nf-input-limit"></div>
-    <#
-    /*
-     * Render our error section if we have an error.
-     */
-    #>
-    <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert"></div>
-    <#
-    /*
-     * Render any custom HTML after our field.
-     */
-    #>
-    {{{ data.afterField }}}
-</script>
-<script id="tmpl-nf-field-wrap" type="text/template">
-	<div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-		<#
-		/*
-		 * This is our main field template. It's called for every field type.
-		 * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
-		 */
-        #>
-		<#
-		/*
-		 * Render our label.
-		 */
-        #>
-		{{{ data.renderLabel() }}}
-		<#
-		/*
-		 * Render our field element. Uses the template for the field being rendered.
-		 */
-        #>
-		<div class="nf-field-element">{{{ data.renderElement() }}}</div>
-		<#
-		/*
-		 * Render our Description Text.
-		 */
-        #>
-		{{{ data.renderDescText() }}}
-	</div>
-</script>
-<script id="tmpl-nf-field-wrap-no-label" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-        <div class="nf-field-label"></div>
-        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
-        <div class="nf-error-wrap"></div>
-    </div>
-</script>
-<script id="tmpl-nf-field-wrap-no-container" type="text/template">
-
-        {{{ data.renderElement() }}}
-
-        <div class="nf-error-wrap"></div>
-</script>
-<script id="tmpl-nf-field-label" type="text/template">
-	<div class="nf-field-label"><label for="nf-field-{{{ data.id }}}"
-	                                   id="nf-label-field-{{{ data.id }}}"
-	                                   class="{{{ data.renderLabelClasses() }}}">{{{ data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*</span>' : '' }}} {{{ data.maybeRenderHelp() }}}</label></div>
-</script>
-<script id="tmpl-nf-field-error" type="text/template">
-	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
-</script><script id="tmpl-nf-form-error" type="text/template">
-	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
-</script><script id="tmpl-nf-field-input-limit" type="text/template">
-    {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
-</script><script id="tmpl-nf-field-null" type="text/template">
-</script><script id="tmpl-nf-field-html" type="text/template">
-    {{{ data.value }}}
-</script>
-
-
-<script id='tmpl-nf-field-input' type='text/template'>
-    <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}}
-           aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-            {{{ data.maybeRequired() }}}
-    >
-</script>
-<script id="tmpl-nf-field-email" type="text/template">
-	<input
-			type="email"
-			value="{{{ data.value }}}"
-			class="{{{ data.renderClasses() }}} nf-element"
-
-			id="nf-field-{{{ data.id }}}"
-			<# if( ! data.disable_browser_autocompletes ){ #>
-			name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
-			autocomplete="email"
-			<# } else { #>
-			name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}"
-			{{{ data.maybeDisableAutocomplete() }}}
-			<# } #>
-			{{{ data.renderPlaceholder() }}}
-			{{{ data.maybeDisabled() }}}
-
-			aria-invalid="false"
-			aria-describedby="nf-error-{{{ data.id }}}"
-			aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-			{{{ data.maybeRequired() }}}
-	>
-</script>
-<script id="tmpl-nf-field-checkbox" type="text/template">
-	<input id="nf-field-{{{ data.id }}}"
-	       name="nf-field-{{{ data.id }}}"
-	       aria-describedby="nf-error-{{{ data.id }}}"
-	       class="{{{ data.renderClasses() }}} nf-element"
-	       type="checkbox"
-	       value="1" {{{ data.maybeDisabled() }}}{{{ data.maybeChecked() }}}
-	       aria-labelledby="nf-label-field-{{{ data.id }}}"
-
-			{{{ data.maybeRequired() }}}
-	>
-</script>
-<script id="tmpl-nf-field-submit" type="text/template">
-	<input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="button" value="{{{ data.label }}}" {{{ ( data.disabled ) ? 'disabled' : '' }}}>
-</script><script id='tmpl-nf-field-button' type='text/template'>
-    <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
-        {{{ data.label }}}
-    </button>
-</script><script id="tmpl-nf-field-hidden" type="text/template">
-    <input type="hidden" id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}}>
-</script>
-<script id="tmpl-nf-field-wrap-user-analytics" type="text/template">
-    <div id="nf-field-{{{ data.id }}}-wrap" style="display: none;" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
-        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
-    </div>
-    <div class="nf-error-wrap"></div>
-</script>
-<div class="" id="wrapper-footer">
-	<footer class="site-footer footer-bg" id="colophon">
-
-		<div id="upper-footer" class="pb-5">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-
-						<a href="https://www.saleshacker.com/"><img
-								src="https://22xmcq37bnw82iclyj35wony-wpengine.netdna-ssl.com/wp-content/themes/saleshacker-2019/images/sales-hacker-logo-grey.png"
-								alt="Sales Hacker - The Largest Community for Modern Sales Professionals. Taking you up and to the right."
-								height="320" width="150" border="0"/></a>
-
-					</div><!--col end -->
-				</div>
-			</div><!-- container end -->
-		</div>
-
-		<div id="lower-footer" class="pb-4">
-			<div class="container">
-				<div class="row justify-content-center pb-4">
-					<div class="col-md-6 d-flex justify-content-center">
-						<form class="flex-fill" method="get" action="https://www.saleshacker.com/"
-						      role="search">
-							<label class="sr-only" for="s">Search</label>
-							<div class="d-flex">
-								<div class="flex-grow-1 p-0">
-									<input type="text" name="s" placeholder="Search saleshacker.com"
-									       class="form-control" required="" data-name="email">
-								</div>
-								<div class="p-0">
-									<button class="btn btn-secondary" type="submit">Search</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div id="footer-rwld" class="pb-4">
-					<ul class="menu d-flex justify-content-center flex-wrap">
-						<li class="menu-item"><a href="/read/">READ</a></li>
-						<li class="menu-item"><a href="/watch/">WATCH</a></li>
-						<li class="menu-item"><a href="/listen/">LISTEN</a></li>
-						<li class="menu-item"><a href="/download/">DOWNLOAD</a></li>
-					</ul>
-				</div>
-				<div class="row">
-					<div class="col-md-3 pb-4 d-flex justify-content-center justify-content-md-start">
-						<address></address>
-					</div>
-					<div class="col-md-6 pb-4">
-						<div class="footer-links">
-							<ul class="menu d-flex justify-content-center flex-wrap"><li class="menu-item"><a href="https://www.saleshacker.com/about" alt="About">About</a></li><li class="menu-item"><a href="https://www.saleshacker.com/contributor-program" alt="Write for Us">Write for Us</a></li><li class="menu-item"><a href="https://saleshacker.typeform.com/to/Ikl2iC" alt="Become a Partner">Become a Partner</a></li><li class="menu-item"><a href="https://www.saleshacker.com/contact" alt="Contact">Contact</a></li><li class="menu-item"><a href="https://www.saleshacker.com/privacy-policy" alt="Privacy Policy">Privacy Policy</a></li><li class="menu-item"><a href="https://www.saleshacker.com/terms-conditions" alt="Terms &amp; Conditions">Terms &amp; Conditions</a></li></ul>						</div>
-					</div>
-					<div id="footer-socials" class="col-md-3 pb-4 d-flex justify-content-center justify-content-md-end">
-						<ul class="menu d-flex justify-content-center flex-wrap">
-							<li><a href="https://www.linkedin.com/company/sales-hacker" target="_blank"><i
-										class="fa fa-linkedin"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UCGQM23b5lZbcfLtHAe87J_A" target="_blank"><i
-										class="fa fa-youtube"></i></a></li>
-							<li><a href="https://www.instagram.com/saleshackerconf" target="_blank"><i
-										class="fa fa-instagram"></i></a></li>
-							<li>
-								<a href="https://twitter.com/SalesHacker?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-								   target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.facebook.com/saleshackerinc/" target="_blank"><i
-										class="fa fa-facebook"></i></a></li>
-						</ul>
-					</div>
-				</div><!-- row end -->
-			</div>
-			<div id="footer-copyright" class="d-flex justify-content-center align-items-center">
-				<small>&copy; Copyright 2019, Sales Hacker</small>
-			</div>
-		</div>
-
-	</footer> <!-- bg end -->
-</div><!-- wrapper end -->
-
-
-</div><!-- #page we need this extra closing tag here -->
-
 </body>
-
 </html>
-
